@@ -1,0 +1,66 @@
+#use "#" at the beginning of the line for comments
+
+#To add a sprite using sprite tag: show_sprite: x, y, spriteTag, background tag (what scene should it be displayed on)
+#To add a sprite using sprite sheet: 
+#show_sprite: x (on sprite sheet), y (on sprite sheet), width, height, x (on screen), y (on screen), background tag, sprite sheet tag, tag (something to identify the sprite)
+
+#To add text: show_text: x, y, text
+
+#To add Graphical hover: graphical_hover: RECT x1, RECT y1, RECT x2, RECT x2, tag, Frame x, Frame y, Sprite sheet x, Sprite Sheet y, Sprite Sheet width, Sprite Sheet height, Sprite sheet tag
+
+#To add RECT: RECT: x1, y1, x2, y2, tag, hoverlabel, background tag
+#To add a RECT for room navigation: RECT_BG: x1, y1, x2, y2, tag, hoverlabel, background tag
+
+#To add custom cursor: cursor: x (on sprite sheet), y (on sprite sheet), width, height, sprite sheet tag
+
+#To play sound: playSound: sound-file-name
+
+
+bg: bg0
+bg: bg1
+bg: bg2
+
+show_sprite: 1, 783, 90, 90, 600, 200, bg3, items, ball
+show_sprite: 1, 653, 480, 128, 960, 800, all, items, UI 
+show_sprite: 1, 909, 64, 64, 1100, 270, bg1, items, chest
+show_sprite: 1, 1009, 66, 66, 1150, 820, all, items, inventory
+show_sprite: 1, 1145, 66, 66, 1250, 820, all, items, save
+show_sprite: 1, 1279, 128, 128, 1195, 350, bg1, items, sign1
+show_sprite: 1, 1279, 128, 128, 1230, 200, bg2, items, sign2
+show_sprite: 1, 1213, 64, 64, 400, 600, bg2, items, shield 
+show_sprite: 1, 1077, 66, 66, 1050, 820, all, items, mute
+show_sprite: 1, 189, 66, 66, 970, 820, all, items, playMusic
+show_sprite: 1, 137, 50, 50, 0 , 0, all, items, escape
+show_sprite: 1, 975, 32, 32, 1356, 38, all, items, close
+show_sprite: 1, 257, 128,128, 1330, 800, all, items, load
+
+RECT: 1251, 822, 1314, 887, savetag, , all
+RECT: 1151, 820, 1213, 885, inventory, , all
+RECT: 1051, 820, 1107, 884, mute, , all
+RECT: 971, 821, 1003, 853, playMusic, , all
+RECT: 1355, 839, 1425, 875, load, , all
+
+RECT: 616, 204, 676, 265, ball, Ball , bg3
+RECT: 1239, 416, 1288, 480, sign1, Entrance to the FrostWind Peaks, bg1
+RECT: 1106, 273, 1160, 332, chest, Chest, bg1
+RECT: 1270, 266, 1317, 328, sign2, Entrance to the Shadow Wood Forest, bg2
+RECT: 1356, 38, 1373, 54, close, Close, all
+RECT: 696, 165, 740, 280, npc, , bg1
+RECT: 402, 601, 460, 660, shield, Shield , bg2
+RECT: 0, 0, 50, 50, exit, , all
+
+RECT_BG: 0, 486, 96, 582, pathway0, Go Back, bg2
+RECT_BG: 1347, 487, 1440, 580, pathway1, Enter, bg1
+RECT_BG: 1349, 165, 1440, 255, pathway2, Enter, bg2
+RECT_BG: 0, 159, 116, 274, pathway3, Go Back, bg3
+
+
+graphical_hover: 1251, 822, 1314, 887, saveHover, 1250, 820, 1, 1, 66, 66, items
+graphical_hover: 1151, 820, 1213, 885, inventoryHover, 1150, 820, 1, 387, 66, 66, items
+graphical_hover: 1051, 820, 1107, 884, muteHover, 1050, 820, 1, 69, 66, 66, items
+graphical_hover: 971, 821, 1003, 853, playHover, 970, 820, 1, 455, 66, 66, items
+graphical_hover: 1355, 839, 1425, 875, loadHover, 1330, 800, 1, 523, 128, 128, items
+
+playSound: background_song.wav
+
+cursor: 1, 875, 32, 32, items

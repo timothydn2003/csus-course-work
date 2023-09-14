@@ -1,0 +1,8 @@
+Art/c_idle.png*c0
+Art/snowBG.jpg*bg1
+Art/grassBG.jpg*bg0
+Art/darkforest.png*bg2
+Art/characterSpriteSheet.png*naruto
+Art/snowSprite.png*snowSprite
+Art/itemSpriteSheet.png*items
+Art/npc.png*npc
