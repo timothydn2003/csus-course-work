@@ -1,0 +1,2 @@
+string1*Ball Collected!
+string2*A great adventure awaits you!
