@@ -1,0 +1,915 @@
+Script started on Sun 05 Mar 2023 09:58:26 PM PST
+]0;timothydoan@ecs-pa-coding1:~[?1034h[timothydoan@ecs-pa-coding1 ~]$ cd csc [K60
+]0;timothydoan@ecs-pa-coding1:~/csc60[timothydoan@ecs-pa-coding1 csc60]$ mkdir lab3
+]0;timothydoan@ecs-pa-coding1:~/csc60[timothydoan@ecs-pa-coding1 csc60]$ cd ;la[K[K[K[K lab3
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ pwd
+/home/student/timothydoan/csc60/lab3
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ mkdir aaa
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ cd aaa
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ pwd
+/home/student/timothydoan/csc60/lab3/aaa
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ cd ..
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ pwd
+/home/student/timothydoan/csc60/lab3
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ ls > file1
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ cat file`1[K[K1
+aaa
+file1
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ less file1
+[?1049h[?1h=aaa
+file1
+[7mfile1 (END)[27m[K[K[?1l>[?1049l]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ file *
+aaa:   directory
+file1: ASCII text
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ wc file1
+ 2  2 10 file1
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ wc *
+wc: aaa: Is a directory
+      0       0       0 aaa
+      2       2      10 file1
+      2       2      10 total
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ grep la be [K[K[K[Kb file1
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ grep file file1
+[01;31m[Kfile[m[K1
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ cp file1 file2
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ ls
+[0m[01;34maaa[0m  file1  file2
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ cd aaa
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ pwd
+/home/student/timothydoan/csc60/lab3/aaa
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ cp ../file1 .
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ ls
+file1
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ mv file1 file2
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ ls
+file2
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ mv ..file[K[K[K[K/file1 .
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ cd ..
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ ls
+[0m[01;34maaa[0m  file2
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ cd aaa
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ ls
+file1  file2
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ cmp file1 file2
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ ls > aaalist
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ cmp file1 aaalist
+file1 aaalist differ: byte 4, line 1
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ diff file1 aaalist
+1c1
+< aaa
+---
+> aaalist
+2a3
+> file2
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ rm - file1
+rm: cannot remove ‘-’: No such file or directory
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ ls
+aaalist  file2
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ ps u
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+timothy+  5631  0.0  0.0 126384  2180 pts/0    Ss   21:56   0:00 -bash
+timothy+  5683  0.0  0.0 114300   824 pts/0    S+   21:57   0:00 script TimothyDoan_lab3.txt
+timothy+  5685  0.0  0.0 114308   400 pts/0    S+   21:57   0:00 script TimothyDoan_lab3.txt
+timothy+  5686  0.0  0.0 126256  2176 pts/1    Ss   21:57   0:00 bash -i
+timothy+  5722  0.0  0.0 114300   824 pts/1    S+   21:58   0:00 script TimothyDoan_lab3.txt
+timothy+  5724  0.0  0.0 114308   400 pts/1    S+   21:58   0:00 script TimothyDoan_lab3.txt
+timothy+  5725  0.0  0.0 126388  2200 pts/2    Ss   21:58   0:00 bash -i
+timothy+  5834  0.0  0.0 166156  1936 pts/2    R+   22:02   0:00 ps u
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S 85198795 5725 5724  0 80   0 - 31597 do_wai pts/2    00:00:00 bash
+0 R 85198795 5835 5725  0 80   0 - 38332 -      pts/2    00:00:00 ps
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ !!
+ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S 85198795 5725 5724  0 80   0 - 31597 do_wai pts/2    00:00:00 bash
+0 R 85198795 5836 5725  0 80   0 - 38332 -      pts/2    00:00:00 ps
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3/aaa[timothydoan@ecs-pa-coding1 aaa]$ cd ..
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab3[timothydoan@ecs-pa-coding1 lab3]$ cd ..
+]0;timothydoan@ecs-pa-coding1:~/csc60[timothydoan@ecs-pa-coding1 csc60]$ cd lab2
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab2[timothydoan@ecs-pa-coding1 lab2]$ head lab2.c
+/*-------------------*/
+/* Timothy Doan      */
+/* Lab 2             */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    printf("\nLab 2.\n\n");
+    printf("Hello World.\n");
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab2[timothydoan@ecs-pa-coding1 lab2]$ head -20 lab2.c
+/*-------------------*/
+/* Timothy Doan      */
+/* Lab 2             */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    printf("\nLab 2.\n\n");
+    printf("Hello World.\n");
+    printf("Hi, Timothy Doan. \n\n");
+    printf("No matter how difficult the challenge is, always stay positive and believe in yourself.\n");
+    printf("- Kobe Bryant\n\n");
+
+    return EXIT_SUCCESS;
+
+}
+/*-------------------*/
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab2[timothydoan@ecs-pa-coding1 lab2]$ tail lab2.c
+    printf("\nLab 2.\n\n");
+    printf("Hello World.\n");
+    printf("Hi, Timothy Doan. \n\n");
+    printf("No matter how difficult the challenge is, always stay positive and believe in yourself.\n");
+    printf("- Kobe Bryant\n\n");
+
+    return EXIT_SUCCESS;
+
+}
+/*-------------------*/
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab2[timothydoan@ecs-pa-coding1 lab2]$ tail -20[K[K[K[K[K[K[K[Ktail -20 lab2.c
+/*-------------------*/
+/* Timothy Doan      */
+/* Lab 2             */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    printf("\nLab 2.\n\n");
+    printf("Hello World.\n");
+    printf("Hi, Timothy Doan. \n\n");
+    printf("No matter how difficult the challenge is, always stay positive and believe in yourself.\n");
+    printf("- Kobe Bryant\n\n");
+
+    return EXIT_SUCCESS;
+
+}
+/*-------------------*/
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab2[timothydoan@ecs-pa-coding1 lab2]$ ls- al | less
+bash: ls-: command not found
+[?1049h[?1h=[K[7m(END)[27m[K[K[?1l>[?1049l]0;timothydoan@ecs-pa-coding1:~/csc60/lab2[timothydoan@ecs-pa-coding1 lab2]$ ls -al | less
+[?1049h[?1h=total 96
+drwxr-xr-x 2 timothydoan domain users  4096 Feb 19 23:27 .
+drwxr-xr-x 4 timothydoan domain users  4096 Mar  5 21:58 ..
+-rwxr-xr-x 1 timothydoan domain users  8360 Feb 19 23:27 a.out
+-rw-r--r-- 1 timothydoan domain users   416 Feb 19 23:09 lab2.c
+-rw-r--r-- 1 timothydoan domain users 82280 Feb 19 23:30 TimothyDoan_lab2.txt
+[7m(END)[27m[K[K[?1l>[?1049l]0;timothydoaant\n\n");
+
+    return EXIT_SUCCESS;
+
+}
+/*-------------------*/
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab2[timothydoan@ecs-pa-coding1 lab2]$ ls- al | less
+bash: ls-: command not found
+[?1049h[?1h=[K[7m(END)[27m[K[K[?1l>[?1049l]0;timothydoan@ecs-pa-coding1:~/csc60/lab2[timothydoan@ecs-pa-coding1 lab2]$ ls -al | less
+[?1049h[?1h=total 96
+drwxr-xr-x 2 timothydoan domain users  4096 Feb 19 23:27 .
+drwxr-xr-x 4 timothydoan domain users  4096 Mar  5 21:58 ..
+-rwxr-xr-x 1 timothydoan domain users  8360 Feb 19 23:27 a.out
+-rw-r--r-- 1 timothydoan domain users   416 Feb 19 23:09 lab2.c
+-rw-r--r-- 1 timothydoan domain users 82280 Feb 19 23:30 TimothyDoan_lab2.txt
+[7m(END)[27m[K[K[?1l>[?1049l]0;timothydoan@ecs-pa-coding1:~/csc60/lab2[timothydoan@ecs-pa-coding1 lab2]$ history
+    1  2022-06-10 14:37:53 clear
+    2  2022-06-10 14:38:16 nano lab1
+    3  2022-06-10 14:42:39 ls
+    4  2022-06-10 14:42:49 as -o lab1.o lab1.asm
+    5  2022-06-10 14:43:31 clear
+    6  2022-06-10 14:43:37 nano lab1.asm
+    7  2022-06-10 14:45:23 as -o lab1.o lab1.asm
+    8  2022-06-10 14:45:40 nano lab1.asm
+    9  2022-06-10 14:46:06 as -o lab1.o lab1.asm
+   10  2022-06-10 14:46:21 ld -o a.out lab1.o lab1.asm
+   11  2022-06-10 14:47:03 ld - a.out lab1.o csc35.o
+   12  2022-06-10 14:47:22 ld -o a.out lab1.o csc35.o
+   13  2022-06-10 14:48:42 mkdir csc35
+   14  2022-06-10 14:48:44 ls
+   15  2022-06-10 14:49:18 as -o lab1.o lab1.asm
+   16  2022-06-10 14:49:42 ld -o a.out lab1.o csc35.o
+   17  2022-06-10 14:49:59 mkdir csc35.o
+   18  2022-06-10 14:50:00 ls
+   19  2022-06-10 14:50:23 as -o lab1.o lab1.asm
+   20  2022-06-10 14:50:48 ld -o a.out lab1.o csc35.o
+   21  2022-06-10 14:51:04 nano lab1.asm
+   22  2022-06-10 14:54:48 clear
+   23  2022-06-10 14:56:04 curl devincook.com/csc/35/csc35.o > csc35.o
+   24  2022-06-10 14:56:11 ls
+   25  2022-06-10 14:56:36 rm csc35.o
+   26  2022-06-10 14:56:56 as -o lab1.o lab1.asm
+   27  2022-06-10 14:57:03 nan lab1.asm
+   28  2022-06-10 14:57:09 nano lab1.asm
+   29  2022-06-10 14:57:23 clear
+   30  2022-06-10 14:57:34 as -o lab1.o lab1.asm
+   31  2022-06-10 14:57:43 nano lab1.asm
+   32  2022-06-10 14:58:54 as -o lab1.o lab1.asm
+   33  2022-06-10 14:59:13 ld -o a.out lab1.o csc35.o
+   34  2022-06-10 14:59:48 curl devincook.com/csc/35/csc35.o > csc35.o
+   35  2022-06-10 15:00:08 curl devincook.com/csc/35/csc35.0 > csc35.0
+   36  2022-06-10 15:00:37 as -o lab1.o lab1.asm
+   37  2022-06-10 15:01:00 ld -o a.out lab1.0 csc35.o
+   38  2022-06-10 15:01:19 ld -o a.out lab1.o csc35.0
+   39  2022-06-10 15:01:43 as -o lab1.o lab1.asm
+   40  2022-06-10 15:01:55 ld -o a.out lab1.o csc35.0
+   41  2022-06-10 15:02:02 clear
+   42  2022-06-10 15:02:03 ls
+   43  2022-06-10 15:02:13 nano lab1.asm
+   44  2022-06-10 15:03:20 curl devincook.com/csc/35/csc35.0 > csc35.0
+   45  2022-06-10 15:03:47 rm csc35.0
+   46  2022-06-10 15:03:49 ls
+   47  2022-06-10 15:04:07 rm lab1
+   48  2022-06-10 15:04:07 ls
+   49  2022-06-10 15:04:16 rm csc35.o
+   50  2022-06-10 15:04:40 curl devincook.com/csc/35/csc35.0 > csc35.0
+   51  2022-06-10 15:05:44 curl devincook.com/csc/35/csc35.o > csc35.o
+   52  2022-06-10 15:06:26 nano lab1.asm
+   53  2022-06-10 15:09:24 nano curl devincook.com/csc/35/csc35.o . csc35.o
+   54  2022-06-10 15:09:51 ls
+   55  2022-06-10 15:10:02 clear
+   56  2022-06-10 15:10:20 curl devincook.com/csc/35/csc35.o > csc35.o
+   57  2022-06-10 15:10:23 ls
+   58  2022-06-10 15:11:20 rmdor csc35.o
+   59  2022-06-10 15:11:24 rmdir csc35.o
+   60  2022-06-10 15:11:26 curl devincook.com/csc/35/csc35.o > csc35.o
+   61  2022-06-10 15:12:00 as -o lab1.o lab1.asm
+   62  2022-06-10 15:12:14 nano lab1.asm
+   63  2022-06-10 15:12:44 as -o lab1.o lab1.asm
+   64  2022-06-10 15:13:00 ld -o a.out lab1.o csc35.o
+   65  2022-06-10 15:13:04 ./a.out
+   66  2022-06-10 15:13:17 nano lab1.asm
+   67  2022-06-10 15:18:14 as -o lab1.o lab1.asm
+   68  2022-06-10 15:18:26 nano lab1.asm
+   69  2022-06-10 15:18:44 as -o lab1.o lab1.asm
+   70  2022-06-10 15:18:53 ld -o a.out lab1.o csc35.o
+   71  2022-06-10 15:19:04 ./a.out
+   72  2022-06-10 15:19:24 nano lab1.asm
+   73  2022-06-10 15:20:08 as -o lab1.o lab1.asm
+   74  2022-06-10 15:20:12 ld -o a.out lab1.o csc35.o
+   75  2022-06-10 15:20:15 ./a.out
+   76  2022-06-10 15:20:49 nano lab1.acm
+   77  2022-06-10 15:20:57 ls
+   78  2022-06-10 15:21:06 nano lab1.sm
+   79  2022-06-10 15:21:12 nano lab1.asm
+   80  2022-06-10 15:22:33 as -o lab1.o lab1.asm
+   81  2022-06-10 15:22:37 ld -o a.out lab1.o csc35.o
+   82  2022-06-10 15:22:42 ./a.out
+   83  2022-06-10 15:23:07 nano lab1.asm
+   84  2022-06-10 15:23:19 as -o lab1.o lab1.asm
+   85  2022-06-10 15:23:22 ld -o a.out lab1.o csc35.o
+   86  2022-06-10 15:23:25 ./a.out
+   87  2022-06-10 15:23:42 alpine
+   88  2022-06-13 14:35:36 clear
+   89  2022-06-13 14:35:41 nano lab2.asm
+   90  2022-06-13 14:40:58 as -o lab2.o lab2.asm
+   91  2022-06-13 14:41:13 ld -o a.out lab2.o csc35.o
+   92  2022-06-13 14:41:18 ./a.out
+   93  2022-06-13 14:42:02 nano lab2.asm
+   94  2022-06-13 14:44:38 as -o lab2.o lab2.asm
+   95  2022-06-13 14:44:43 ld -o a.out lab2.o csc35.o
+   96  2022-06-13 14:44:53 nano lab2.asm
+   97  2022-06-13 14:45:13 as -o lab2.o lab2.asm
+   98  2022-06-13 14:45:15 ld -o a.out lab2.o csc35.o
+   99  2022-06-13 14:45:20 ./a.out
+  100  2022-06-13 14:45:39 nano lab2.asm
+  101  2022-06-13 14:49:41 as -o lab2.o lab2.asm
+  102  2022-06-13 14:49:43 ld -o a.out lab2.o csc35.o
+  103  2022-06-13 14:49:46 ./a.out
+  104  2022-06-13 14:50:21 nano lab2.asm
+  105  2022-06-13 14:52:29 as -o lab2.o lab2.asm
+  106  2022-06-13 14:52:32 ld -o a.out lab2.o csc35.o
+  107  2022-06-13 14:52:34 ./a.out
+  108  2022-06-13 14:53:18 nano lab2.asm
+  109  2022-06-13 14:56:55 as -o lab2.o lab2.asm
+  110  2022-06-13 14:56:57 ld -o a.out lab2.o csc35.o
+  111  2022-06-13 14:57:00 ./a.out
+  112  2022-06-13 14:57:28 nano lab2.asm
+  113  2022-06-13 14:59:40 as -o lab2.o lab2.asm
+  114  2022-06-13 14:59:43 ld -o a.out lab2.o csc35.o
+  115  2022-06-13 14:59:45 ./a.out
+  116  2022-06-13 15:00:11 nano lab2.asm
+  117  2022-06-13 15:01:06 as -o lab2.o lab2.asm
+  118  2022-06-13 15:01:08 ld -o a.out lab2.o csc35.o
+  119  2022-06-13 15:01:11 ./a.out
+  120  2022-06-13 15:01:39 nano lab2.asm
+  121  2022-06-13 15:02:24 as -o lab2.o lab2.asm
+  122  2022-06-13 15:02:26 ld -o a.out lab2.o csc35.o
+  123  2022-06-13 15:02:28 ./a.out
+  124  2022-06-13 15:02:46 nano lab2.asm
+  125  2022-06-13 15:05:03 as -o lab2.o lab2.asm
+  126  2022-06-13 15:05:04 ld -o a.out lab2.o csc35.o
+  127  2022-06-13 15:05:06 ./a.out
+  128  2022-06-13 15:05:27 nano lab2.asm
+  129  2022-06-13 15:05:53 as -o lab2.o lab2.asm
+  130  2022-06-13 15:05:55 ld -o a.out lab2.o csc35.o
+  131  2022-06-13 15:05:58 ./a.out
+  132  2022-06-13 15:06:56 alpine
+  133  2022-06-13 15:08:25 nano lab2.asm
+  134  2022-06-13 15:12:48 alpine
+  135  2022-06-20 14:35:01 clear
+  136  2022-06-20 14:35:08 nano lab3.asm
+  137  2022-06-20 14:43:36 as -o lab3.o lab3.asm
+  138  2022-06-20 14:43:49 nano lab3.asm
+  139  2022-06-20 14:44:08 as -o lab3.o lab3.asm
+  140  2022-06-20 14:44:18 ld -o a.out lab3.o csc35.o
+  141  2022-06-20 14:44:23 ./a.out
+  142  2022-06-20 14:44:35 nano lab3.asm
+  143  2022-06-20 14:49:22 as -o lab3.o lab3.asm
+  144  2022-06-20 14:49:25 ld -o a.out lab3.o csc35.o
+  145  2022-06-20 14:49:31 nano lab3.asm
+  146  2022-06-20 14:49:44 as -o lab3.o lab3.asm
+  147  2022-06-20 14:49:45 ld -o a.out lab3.o csc35.o
+  148  2022-06-20 14:49:49 ./a.out
+  149  2022-06-20 14:50:12 nano lab3.asm
+  150  2022-06-20 14:52:35 as -o lab3.o lab3.asm
+  151  2022-06-20 14:52:37 ld -o a.out lab3.o csc35.o
+  152  2022-06-20 14:52:39 ./a.out
+  153  2022-06-20 14:52:51 nano lab3.asm
+  154  2022-06-20 14:53:34 as -o lab3.o lab3.asm
+  155  2022-06-20 14:53:36 ld -o a.out lab3.o csc35.o
+  156  2022-06-20 14:53:38 ./a.out
+  157  2022-06-20 14:53:50 nano lab3.asm
+  158  2022-06-20 14:59:10 as -o lab3.o lab3.asm
+  159  2022-06-20 14:59:12 ld -o a.out lab3.o csc35.o
+  160  2022-06-20 14:59:20 nano lab3.asm
+  161  2022-06-20 15:00:08 as -o lab3.o lab3.asm
+  162  2022-06-20 15:00:10 ld -o a.out lab3.o csc35.o
+  163  2022-06-20 15:00:13 ./a.out
+  164  2022-06-20 15:00:23 nano lab3.asm
+  165  2022-06-20 15:00:33 as -o lab3.o lab3.asm
+  166  2022-06-20 15:00:35 ld -o a.out lab3.o csc35.o
+  167  2022-06-20 15:00:36 ./a.out
+  168  2022-06-20 15:00:51 nano lab3.asm
+  169  2022-06-20 15:02:24 as -o lab3.o lab3.asm
+  170  2022-06-20 15:02:25 ld -o a.out lab3.o csc35.o
+  171  2022-06-20 15:02:27 ./a.out
+  172  2022-06-20 15:02:39 nano lab3.asm
+  173  2022-06-20 15:02:55 as -o lab3.o lab3.asm
+  174  2022-06-20 15:02:56 ld -o a.out lab3.o csc35.o
+  175  2022-06-20 15:02:58 ./a.out
+  176  2022-06-20 15:03:34 nano lab3.asm
+  177  2022-06-20 15:04:34 as -o lab3.o lab3.asm
+  178  2022-06-20 15:04:36 ld -o a.out lab3.o csc35.o
+  179  2022-06-20 15:04:38 ./a.out
+  180  2022-06-20 15:05:04 nano lab3.asm
+  181  2022-06-20 15:08:19 clear
+  182  2022-06-20 15:08:23 as -o lab3.o lab3.asm
+  183  2022-06-20 15:08:25 ld -o a.out lab3.o csc35.o
+  184  2022-06-20 15:08:32 ./a.out
+  185  2022-06-20 15:08:45 1
+  186  2022-06-20 15:09:08 nano lab3.asm
+  187  2022-06-20 15:20:51 as -o lab3.o lab3.asm
+  188  2022-06-20 15:20:53 ld -o a.out lab3.o csc35.o
+  189  2022-06-20 15:21:00 nano lab3.asm
+  190  2022-06-20 15:21:25 as -o lab3.o lab3.asm
+  191  2022-06-20 15:21:27 ld -o a.out lab3.o csc35.o
+  192  2022-06-20 15:21:33 nano lab3.asm
+  193  2022-06-20 15:21:44 as -o lab3.o lab3.asm
+  194  2022-06-20 15:21:45 ld -o a.out lab3.o csc35.o
+  195  2022-06-20 15:21:53 ./a.out
+  196  2022-06-20 15:22:21 nano lab3.asm
+  197  2022-06-20 15:25:00 as -o lab3.o lab3.asm
+  198  2022-06-20 15:25:01 ld -o a.out lab3.o csc35.o
+  199  2022-06-20 15:25:06 ./a.out
+  200  2022-06-20 15:25:10 nano lab3.asm
+  201  2022-06-20 15:25:59 as -o lab3.o lab3.asm
+  202  2022-06-20 15:26:01 ld -o a.out lab3.o csc35.o
+  203  2022-06-20 15:26:02 ./a.out
+  204  2022-06-20 15:26:45 nano lab3.asm
+  205  2022-06-20 15:29:57 as -o lab3.o lab3.asm
+  206  2022-06-20 15:29:59 ld -o a.out lab3.o csc35.o
+  207  2022-06-20 15:30:02 ./a.out
+  208  2022-06-20 15:30:33 nano lab3.asm
+  209  2022-06-20 15:32:53 clear
+  210  2022-06-20 15:32:55 as -o lab3.o lab3.asm
+  211  2022-06-20 15:33:05 nano lab3.asm
+  212  2022-06-20 15:33:43 as -o lab3.o lab3.asm
+  213  2022-06-20 15:33:52 nano lab3.asm
+  214  2022-06-20 15:35:49 as -o lab3.o lab3.asm
+  215  2022-06-20 15:36:35 nano lab3.asm
+  216  2022-06-20 15:37:35 as -o lab3.o lab3.asm
+  217  2022-06-20 15:37:40 ld -o a.out lab3.o csc35.o
+  218  2022-06-20 15:37:45 ./a.out
+  219  2022-06-20 15:38:20 nano lab3.asm
+  220  2022-06-20 15:38:47 as -o lab3.o lab3.asm
+  221  2022-06-20 15:38:48 ld -o a.out lab3.o csc35.o
+  222  2022-06-20 15:38:50 ./a.out
+  223  2022-06-20 15:39:57 nano lab3.asm
+  224  2022-06-20 15:40:53 clear
+  225  2022-06-20 15:40:58 as -o lab3.o lab3.asm
+  226  2022-06-20 15:41:00 ld -o a.out lab3.o csc35.o
+  227  2022-06-20 15:41:02 ./a.out
+  228  2022-06-20 15:41:19 nano lab3.asm
+  229  2022-06-20 15:43:14 as -o lab3.o lab3.asm
+  230  2022-06-20 15:43:16 ld -o a.out lab3.o csc35.o
+  231  2022-06-20 15:43:18 ./a.out
+  232  2022-06-20 15:44:04 nano lab3.asm
+  233  2022-06-20 15:44:42 as -o lab3.o lab3.asm
+  234  2022-06-20 15:44:44 ld -o a.out lab3.o csc35.o
+  235  2022-06-20 15:44:46 ./a.out
+  236  2022-06-20 15:45:16 nano lab3.asm
+  237  2022-06-20 15:46:37 as -o lab3.o lab3.asm
+  238  2022-06-20 15:46:38 ld -o a.out lab3.o csc35.o
+  239  2022-06-20 15:46:40 ./a.out
+  240  2022-06-20 15:47:08 nano lab3.asm
+  241  2022-06-20 15:47:50 clear
+  242  2022-06-20 15:47:53 nano lab3.asm
+  243  2022-06-20 15:47:59 as -o lab3.o lab3.asm
+  244  2022-06-20 15:48:02 ld -o a.out lab3.o csc35.o
+  245  2022-06-20 15:48:07 ./a.out
+  246  2022-06-20 15:48:23 nano lab3.asm
+  247  2022-06-20 15:48:54 as -o lab3.o lab3.asm
+  248  2022-06-20 15:48:55 ld -o a.out lab3.o csc35.o
+  249  2022-06-20 15:48:56 ./a.out
+  250  2022-06-20 15:49:41 nano lab3.asm
+  251  2022-06-20 15:51:42 as -o lab3.o lab3.asm
+  252  2022-06-20 15:51:44 ld -o a.out lab3.o csc35.o
+  253  2022-06-20 15:51:45 ./a.out
+  254  2022-06-20 15:52:23 nano lab3.asm
+  255  2022-06-20 15:52:58 as -o lab3.o lab3.asm
+  256  2022-06-20 15:53:00 ld -o a.out lab3.o csc35.o
+  257  2022-06-20 15:53:02 ./a.out
+  258  2022-06-20 15:54:05 nano lab3.asm
+  259  2022-06-20 15:54:21 as -o lab3.o lab3.asm
+  260  2022-06-20 15:54:23 ld -o a.out lab3.o csc35.o
+  261  2022-06-20 15:54:25 ./a.out
+  262  2022-06-20 15:55:17 alpine
+  263  2022-06-22 14:24:34 nano lab4.asm
+  264  2022-06-22 14:27:25 clear
+  265  2022-06-22 14:27:37 as -o lab4.o lab4.asm
+  266  2022-06-22 14:27:44 ld -o a.out lab4.o csc35.o
+  267  2022-06-22 14:27:48 ./a.out
+  268  2022-06-22 14:28:01 nano lab4.asm
+  269  2022-06-22 14:31:02 as -o lab4.o lab4.asm
+  270  2022-06-22 14:31:03 ld -o a.out lab4.o csc35.o
+  271  2022-06-22 14:31:06 ./a.out
+  272  2022-06-22 14:31:28 nano lab4.asm
+  273  2022-06-22 14:33:46 as -o lab4.o lab4.asm
+  274  2022-06-22 14:33:48 ld -o a.out lab4.o csc35.o
+  275  2022-06-22 14:33:50 ./a.out
+  276  2022-06-22 14:34:17 nano lab4.asm
+  277  2022-06-22 14:34:44 as -o lab4.o lab4.asm
+  278  2022-06-22 14:34:46 ld -o a.out lab4.o csc35.o
+  279  2022-06-22 14:34:48 ./a.out
+  280  2022-06-22 14:35:03 nano lab4.asm
+  281  2022-06-22 14:35:41 alpine
+  282  2022-06-22 14:36:40 as -o lab4.o lab4.asm
+  283  2022-06-22 14:36:42 ld -o a.out lab4.o csc35.o
+  284  2022-06-22 14:36:44 ./a.out
+  285  2022-06-22 14:37:09 nano lab4.asm
+  286  2022-06-22 14:37:27 alpine
+  287  2022-06-22 14:39:07 nano lab4.asm
+  288  2022-06-22 14:39:22 alpine
+  289  2022-06-27 14:27:06 clear
+  290  2022-06-27 14:27:12 nano lab5.asm
+  291  2022-06-27 14:32:38 as -o lab5.o lab5.asm
+  292  2022-06-27 14:32:47 nano lab5.asm
+  293  2022-06-27 14:34:39 as -o lab5.o lab5.asm
+  294  2022-06-27 14:34:49 ld -o a.out lab5.o csc35.o
+  295  2022-06-27 14:34:57 nano lab5.asm
+  296  2022-06-27 14:35:06 as -o lab5.o lab5.asm
+  297  2022-06-27 14:35:08 ld -o a.out lab5.o csc35.o
+  298  2022-06-27 14:35:13 ./a.out
+  299  2022-06-27 14:35:25 nano lab5.asm
+  300  2022-06-27 14:35:57 as -o lab5.o lab5.asm
+  301  2022-06-27 14:35:59 ld -o a.out lab5.o csc35.o
+  302  2022-06-27 14:36:01 ./a.out
+  303  2022-06-27 14:36:05 nano lab5.asm
+  304  2022-06-27 14:42:28 as -o lab5.o lab5.asm
+  305  2022-06-27 14:42:29 ld -o a.out lab5.o csc35.o
+  306  2022-06-27 14:42:31 ./a.out
+  307  2022-06-27 14:42:53 nano lab5.asm
+  308  2022-06-27 14:43:27 as -o lab5.o lab5.asm
+  309  2022-06-27 14:43:28 ld -o a.out lab5.o csc35.o
+  310  2022-06-27 14:43:30 ./a.out
+  311  2022-06-27 14:43:41 nano lab5.asm
+  312  2022-06-27 14:47:39 as -o lab5.o lab5.asm
+  313  2022-06-27 14:47:41 ld -o a.out lab5.o csc35.o
+  314  2022-06-27 14:47:47 nano lab5.asm
+  315  2022-06-27 14:47:59 as -o lab5.o lab5.asm
+  316  2022-06-27 14:48:00 ld -o a.out lab5.o csc35.o
+  317  2022-06-27 14:48:04 ./a.out
+  318  2022-06-27 14:48:26 nano lab5.asm
+  319  2022-06-27 14:50:46 as -o lab5.o lab5.asm
+  320  2022-06-27 14:50:48 ld -o a.out lab5.o csc35.o
+  321  2022-06-27 14:50:49 ./a.out
+  322  2022-06-27 14:51:06 nano lab5.asm
+  323  2022-06-27 14:53:29 clear
+  324  2022-06-27 14:53:35 as -o lab5.o lab5.asm
+  325  2022-06-27 14:53:37 ld -o a.out lab5.o csc35.o
+  326  2022-06-27 14:53:40 ./a.out
+  327  2022-06-27 14:54:00 nano lab5.asm
+  328  2022-06-27 14:54:31 as -o lab5.o lab5.asm
+  329  2022-06-27 14:54:33 ld -o a.out lab5.o csc35.o
+  330  2022-06-27 14:54:34 ./a.out
+  331  2022-06-27 14:54:49 nano lab5.asm
+  332  2022-06-27 14:56:51 as -o lab5.o lab5.asm
+  333  2022-06-27 14:56:53 ld -o a.out lab5.o csc35.o
+  334  2022-06-27 14:56:54 ./a.out
+  335  2022-06-27 14:57:07 alpine
+  336  2022-06-27 15:00:32 clear
+  337  2022-06-27 15:00:43 nano lab5.asm
+  338  2022-06-27 15:02:02 as -o lab5.o lab5.asm
+  339  2022-06-27 15:02:04 ld -o a.out lab5.o csc35.o
+  340  2022-06-27 15:02:07 ./a.out
+  341  2022-06-27 15:02:21 nano lab5.asm
+  342  2022-06-27 15:03:21 as -o lab5.o lab5.asm
+  343  2022-06-27 -06-29 14:42:10 as -o lab6.o lab6.asm
+  361  2022-06-29 14:42:12 ld -o a.out lab6.o csc35.o
+  362  2022-06-29 14:42:14 ./a.out
+  363  2022-06-29 14:42:29 nano lab6.asm
+  364  2022-06-29 14:44:00 as -o lab6.o lab6.asm
+  365  2022-06-29 14:44:01 ld -o a.out lab6.o csc35.o
+  366  2022-06-29 14:44:03 ./a.out
+  367  2022-06-29 14:44:19 nano lab6.asm
+  368  2022-06-29 14:45:41 as -o lab6.o lab6.asm
+  369  2022-06-29 14:45:46 nano lab6.asm
+  370  2022-06-29 14:47:13 as -o lab6.o lab6.asm
+  371  2022-06-29 14:47:16 ld -o a.out lab6.o csc35.o
+  372  2022-06-29 14:47:19 ./a.out
+  373  2022-06-29 14:47:36 nano lab6.asm
+  374  2022-06-29 14:48:39 as -o lab6.o lab6.asm
+  375  2022-06-29 14:48:41 ld -o a.out lab6.o csc35.o
+  376  2022-06-29 14:48:42 ./a.out
+  377  2022-06-29 14:48:54 nano lab6.asm
+  378  2022-06-29 14:51:33 clear
+  379  2022-06-29 14:51:35 as -o lab6.o lab6.asm
+  380  2022-06-29 14:51:40 nano lab6.asm
+  381  2022-06-29 14:53:50 as -o lab6.o lab6.asm
+  382  2022-06-29 14:53:53 ld -o a.out lab6.o csc35.o
+  383  2022-06-29 14:53:57 ./a.out
+  384  2022-06-29 14:54:15 nano lab6.asm
+  385  2022-06-29 14:54:52 as -o lab6.o lab6.asm
+  386  2022-06-29 14:54:54 ld -o a.out lab6.o csc35.o
+  387  2022-06-29 14:54:55 ./a.out
+  388  2022-06-29 14:55:07 nano lab6.asm
+  389  2022-06-29 14:55:39 as -o lab6.o lab6.asm
+  390  2022-06-29 14:55:40 ld -o a.out lab6.o csc35.o
+  391  2022-06-29 14:55:41 ./a.out
+  392  2022-06-29 14:56:00 nano lab6.asm
+  393  2022-06-29 14:57:40 as -o lab6.o lab6.asm
+  394  2022-06-29 14:57:42 ld -o a.out lab6.o csc35.o
+  395  2022-06-29 14:57:43 ./a.out
+  396  2022-06-29 14:58:03 nano lab6.asm
+  397  2022-06-29 14:59:37 as -o lab6.o lab6.asm
+  398  2022-06-29 14:59:56 ld -o a.out lab6.o csc35.o
+  399  2022-06-29 14:59:57 ./a.out
+  400  2022-06-29 15:00:09 alpine
+  401  2022-07-06 14:31:35 clear
+  402  2022-07-06 14:31:41 nano lab7.asm
+  403  2022-07-06 14:36:28 as -o lab7.o lab7.asm
+  404  2022-07-06 14:36:37 ld -o a.out lab7.o
+  405  2022-07-06 14:36:43 ./a.out
+  406  2022-07-06 14:37:06 nano lab7.asm
+  407  2022-07-06 14:38:29 as -o lab7.o lab7.asm
+  408  2022-07-06 14:38:41 ld -o a.out lab7.o
+  409  2022-07-06 14:38:44 ./a.out
+  410  2022-07-06 14:39:02 nano lab7.asm
+  411  2022-07-06 14:39:13 as -o lab7.o lab7.asm
+  412  2022-07-06 14:39:16 ld -o a.out lab7.o
+  413  2022-07-06 14:39:18 ./a.out
+  414  2022-07-06 14:39:22 nano lab7.asm
+  415  2022-07-06 14:42:14 as -o lab7.o lab7.asm
+  416  2022-07-06 14:42:15 ld -o a.out lab7.o
+  417  2022-07-06 14:42:17 ./a.out
+  418  2022-07-06 14:42:40 nano lab7.asm
+  419  2022-07-06 14:43:13 as -o lab7.o lab7.asm
+  420  2022-07-06 14:43:15 ld -o a.out lab7.o
+  421  2022-07-06 14:43:16 ./a.out
+  422  2022-07-06 14:43:23 nano lab7.asm
+  423  2022-07-06 14:44:26 as -o lab7.o lab7.asm
+  424  2022-07-06 14:44:28 ld -o a.out lab7.o
+  425  2022-07-06 14:44:29 ./a.out
+  426  2022-07-06 14:44:37 nano lab7.asm
+  427  2022-07-06 14:45:11 as -o lab7.o lab7.asm
+  428  2022-07-06 14:45:12 ld -o a.out lab7.o
+  429  2022-07-06 14:45:14 ./a.out
+  430  2022-07-06 14:45:36 nano lab7.asm
+  431  2022-07-06 14:46:03 as -o lab7.o lab7.asm
+  432  2022-07-06 14:46:04 ld -o a.out lab7.o
+  433  2022-07-06 14:46:07 ./a.out
+  434  2022-07-06 14:46:17 nano lab7.asm
+  435  2022-07-06 14:47:27 as -o lab7.o lab7.asm
+  436  2022-07-06 14:47:29 ld -o a.out lab7.o
+  437  2022-07-06 14:47:31 ./a.out
+  438  2022-07-06 14:47:37 nano lab7.asm
+  439  2022-07-06 14:48:18 as -o lab7.o lab7.asm
+  440  2022-07-06 14:48:20 ld -o a.out lab7.o
+  441  2022-07-06 14:48:22 ./a.out
+  442  2022-07-06 14:48:32 nano lab7.asm
+  443  2022-07-06 14:49:03 as -o lab7.o lab7.asm
+  444  2022-07-06 14:49:04 ld -o a.out lab7.o
+  445  2022-07-06 14:49:06 ./a.out
+  446  2022-07-06 14:49:11 nano lab7.asm
+  447  2022-07-06 14:49:19 as -o lab7.o lab7.asm
+  448  2022-07-06 14:49:20 ld -o a.out lab7.o
+  449  2022-07-06 14:49:22 ./a.out
+  450  2022-07-06 14:49:28 nano lab7.asm
+  451  2022-07-06 14:49:47 as -o lab7.o lab7.asm
+  452  2022-07-06 14:49:48 ld -o a.out lab7.o
+  453  2022-07-06 14:49:49 ./a.out
+  454  2022-07-06 14:51:16 nano lab7.asm
+  455  2022-07-06 14:51:43 alpine
+  456  2023-02-08 21:12:16 cat .vimrc
+  457  2023-02-08 21:12:22 exit
+  458  2023-02-08 21:09:09 vim .vimrc
+  459  2023-02-08 21:12:06 script TimDoan_lab1.txt
+  460  2023-02-08 21:14:10 vim TimDoan_lab1.txt
+  461  2023-02-08 21:16:17 alpine
+  462  2023-02-08 21:17:42 exit
+  463  2023-02-19 23:10:43 gcc lab2.c
+  464  2023-02-19 23:10:48 a.out
+  465  2023-02-19 23:10:51 ./a.out
+  466  2023-02-19 23:10:56 exit
+  467  2023-02-19 23:16:22 gcc lab2.c
+  468  2023-02-19 23:16:28 ./a.out
+  469  2023-02-19 23:16:33 exit
+  470  2023-02-19 23:17:39 gcc lab2.c
+  471  2023-02-19 23:17:41 ./a.out
+  472  2023-02-19 23:17:43 exit
+  473  2023-02-19 23:27:13 gcc lab2.c
+  474  2023-02-19 23:27:16 ./a.out
+  475  2023-02-19 23:27:18 exit
+  476  2023-02-19 23:26:43 cat .vimrc
+  477  2023-02-19 23:27:07 script TimothyDoan_lab2.txt
+  478  2023-02-19 23:27:23 ls -l
+  479  2023-02-19 23:27:31 alpine
+  480  2023-02-19 23:30:06 exit
+  481  2023-02-19 23:17:05 gcc lab2.c
+  482  2023-02-19 23:17:07 ./a.out
+  483  2023-02-19 23:17:11 ls -l
+  484  2023-02-19 23:17:37 script TimothyDoan_lab2.txt
+  485  2023-02-19 23:17:46 ls -l
+  486  2023-02-19 23:17:53 alpine
+  487  2023-02-19 23:25:53 script TimothyDoan_lab2.txt
+  488  2023-02-19 23:30:14 exit
+  489  2023-02-19 22:54:25 mkdir csc60
+  490  2023-02-19 22:54:30 cd csc60
+  491  2023-02-19 22:54:41 mkdir lab2
+  492  2023-02-19 22:54:43 cd lab2
+  493  2023-02-19 22:54:58 vim lab2.c
+  494  2023-02-19 23:04:43 gcc lab2.c
+  495  2023-02-19 23:04:53 a.out
+  496  2023-02-19 23:05:02 ./a.out
+  497  2023-02-19 23:05:30 vim lab2.c
+  498  2023-02-19 23:06:29 gcc lab2.c
+  499  2023-02-19 23:06:34 ./a.out
+  500  2023-02-19 23:07:19 vim lab2.c
+  501  2023-02-19 23:08:52 gcc lab2.c
+  502  2023-02-19 23:08:57 ./a.out
+  503  2023-02-19 23:09:31 vim lab2.c
+  504  2023-02-19 23:09:47 gcc lab2.c
+  505  2023-02-19 23:09:49 ./a.out
+  506  2023-02-19 23:10:23 script TimothyDoan_lab2.txt
+  507  2023-02-19 23:11:07 ls -l
+  508  2023-02-19 23:16:13 script TimothyDoan_lab2.txt
+  509  2023-02-19 23:16:42 ls -l
+  510  2023-02-19 23:17:02 script TimothyDoan_lab2.txt
+  511  2023-02-19 23:31:02 "exit"
+  512  2023-02-28 22:49:05 cd csc60
+  513  2023-02-28 22:49:08 rm -r lab3
+  514  2023-02-28 22:49:11 cd lab3
+  515  2023-02-28 22:49:15 exit
+  516  2023-02-28 22:06:50 script TimothyDoan_lab3.txt
+  517  2023-02-28 22:07:08 cd csc60
+  518  2023-02-28 22:07:17 mkdir lab3
+  519  2023-02-28 22:07:21 cd lab3
+  520  2023-02-28 22:07:23 pwd
+  521  2023-02-28 22:07:28 mkdir aaa
+  522  2023-02-28 22:07:32 cd aaa
+  523  2023-02-28 22:07:33 pwd
+  524  2023-02-28 22:07:38 cd ..
+  525  2023-02-28 22:07:55 pwd
+  526  2023-02-28 22:08:04 ls > file1
+  527  2023-02-28 22:08:10 cat file1
+  528  2023-02-28 22:08:47 less file1
+  529  2023-02-28 22:08:58 file *
+  530  2023-02-28 22:09:01 wc file1
+  531  2023-02-28 22:09:04 wc *
+  532  2023-02-28 22:09:10 grep file file1
+  533  2023-02-28 22:09:26 cp file file2
+  534  2023-02-28 22:10:01 ls
+  535  2023-02-28 22:13:11 grep file file1
+  536  2023-02-28 22:13:29 cp file file1
+  537  2023-02-28 22:16:41 script TimothyDoan_lab3.txt
+  538  2023-02-28 22:17:01 cd csc 60
+  539  2023-02-28 22:17:13 cd csc60
+  540  2023-02-28 22:17:17 mkdir lab3
+  541  2023-02-28 22:18:23 cd lab3
+  542  2023-02-28 22:18:41 rm -r
+  543  2023-02-28 22:18:47 rm --help
+  544  2023-02-28 22:18:58 rmdir
+  545  2023-02-28 22:19:31 cd ..
+  546  2023-02-28 22:19:44 rm TimothyDoan_lab3.txt
+  547  2023-02-28 22:20:03 rm csc60
+  548  2023-02-28 22:20:14 rm lab3
+  549  2023-02-28 22:20:21 mkdir lab3
+  550  2023-02-28 22:20:26 rm lab3
+  551  2023-02-28 22:20:35 cd lab3
+  552  2023-02-28 22:20:37 rmdir
+  553  2023-02-28 22:21:41 rm -r
+  554  2023-02-28 22:21:46 cd ..
+  555  2023-02-28 22:21:49 cd lab3
+  556  2023-02-28 22:22:08 rm -r
+  557  2023-02-28 22:22:13 rm --help
+  558  2023-02-28 22:22:32 rm -r
+  559  2023-020
+  539  2023-02-28 22:17:13 cd csc60
+  540  2023-02-28 22:17:17 mkdir lab3
+  541  2023-02-28 22:18:23 cd lab3
+  542  2023-02-28 22:18:41 rm -r
+  543  2023-02-28 22:18:47 rm --help
+  544  2023-02-28 22:18:58 rmdir
+  545  2023-02-28 22:19:31 cd ..
+  546  2023-02-28 22:19:44 rm TimothyDoan_lab3.txt
+  547  2023-02-28 22:20:03 rm csc60
+  548  2023-02-28 22:20:14 rm lab3
+  549  2023-02-28 22:20:21 mkdir lab3
+  550  2023-02-28 22:20:26 rm lab3
+  551  2023-02-28 22:20:35 cd lab3
+  552  2023-02-28 22:20:37 rmdir
+  553  2023-02-28 22:21:41 rm -r
+  554  2023-02-28 22:21:46 cd ..
+  555  2023-02-28 22:21:49 cd lab3
+  556  2023-02-28 22:22:08 rm -r
+  557  2023-02-28 22:22:13 rm --help
+  558  2023-02-28 22:22:32 rm -r
+  559  2023-02-28 22:22:39 rm-r
+  560  2023-02-28 22:22:50 rm - R
+  561  2023-02-28 22:22:59 rm -R
+  562  2023-02-28 22:23:53 rm - f
+  563  2023-02-28 22:23:55 rm -f
+  564  2023-02-28 22:24:38 cd..
+  565  2023-02-28 22:24:41 cd ..
+  566  2023-02-28 22:24:55 script TimothyDoan_lab3.txt
+  567  2023-02-28 22:29:35 rm -r aaa
+  568  2023-02-28 22:29:44 clear
+  569  2023-02-28 22:29:57 script TimothyDoan_lab3.txt
+  570  2023-02-28 22:30:27 cd ..
+  571  2023-02-28 22:30:36 script TimothyDoan_lab3.txt
+  572  2023-02-28 22:30:52 cd csc60
+  573  2023-02-28 22:30:55 mkdir lab3
+  574  2023-02-28 22:30:59 cd lab3
+  575  2023-02-28 22:31:00 pwd
+  576  2023-02-28 22:31:04 mkdir aaa
+  577  2023-02-28 22:31:07 cd aaa
+  578  2023-02-28 22:31:10 pwd
+  579  2023-02-28 22:31:13 cd ..
+  580  2023-02-28 22:31:14 pwd
+  581  2023-02-28 22:31:19 ls > file1
+  582  2023-02-28 22:31:22 cat file1
+  583  2023-02-28 22:31:28 less file1
+  584  2023-02-28 22:31:32 file *
+  585  2023-02-28 22:31:38 wc file1
+  586  2023-02-28 22:31:41 wc *
+  587  2023-02-28 22:31:47 grep file file1
+  588  2023-02-28 22:32:03 cp file1 file2
+  589  2023-02-28 22:32:04 ls
+  590  2023-02-28 22:32:11 cd aaa
+  591  2023-02-28 22:32:14 pwd
+  592  2023-02-28 22:32:28 cp../file1 .
+  593  2023-02-28 22:32:37 cp ../file1 .
+  594  2023-02-28 22:32:40 ls
+  595  2023-02-28 22:32:45 mv file1 file2
+  596  2023-02-28 22:32:50 ls 
+  597  2023-02-28 22:32:54 mv ../file1
+  598  2023-02-28 22:32:56 cd ..
+  599  2023-02-28 22:32:58 ls cd aaa
+  600  2023-02-28 22:32:59 ls
+  601  2023-02-28 22:33:08 cmp file1 file2
+  602  2023-02-28 22:33:16 ls > aaalist
+  603  2023-02-28 22:33:22 cmp file1 aaalist
+  604  2023-02-28 22:33:35 diff file1 aaalist
+  605  2023-02-28 22:33:41 rm -i file1
+  606  2023-02-28 22:33:44 ps u
+  607  2023-02-28 22:33:48 ps -l
+  608  2023-02-28 22:34:00 cd ..
+  609  2023-02-28 22:34:54 rm - lab3
+  610  2023-02-28 22:35:01 rm -r lab3
+  611  2023-02-28 22:35:10 script TimothyDOan_lab3.txt
+  612  2023-02-28 22:35:17 hisotry -c
+  613  2023-02-28 22:35:21 cd csc60
+  614  2023-02-28 22:35:24 mkdir lab3
+  615  2023-02-28 22:35:59 rm r lab3
+  616  2023-02-28 22:36:07 rm -r lab3
+  617  2023-02-28 22:36:10 cd lab3
+  618  2023-02-28 22:36:21 cd ......
+  619  2023-02-28 22:36:24 dc ..
+  620  2023-02-28 22:36:27 cd ..
+  621  2023-02-28 22:36:41 script TimothyDoan_lab3.txt
+  622  2023-02-28 22:36:53 cd csc60
+  623  2023-02-28 22:36:57 mkdir lab3
+  624  2023-02-28 22:37:00 cd lab3
+  625  2023-02-28 22:37:01 pwd
+  626  2023-02-28 22:37:05 mkdir aaa
+  627  2023-02-28 22:37:06 cd aaa
+  628  2023-02-28 22:37:08 pwd
+  629  2023-02-28 22:37:12 cd ..
+  630  2023-02-28 22:37:16 pwd
+  631  2023-02-28 22:37:20 ls > file1
+  632  2023-02-28 22:37:23 cat file1
+  633  2023-02-28 22:37:29 less file1
+  634  2023-02-28 22:37:33 file *
+  635  2023-02-28 22:37:37 wc file1
+  636  2023-02-28 22:37:41 wc *
+  637  2023-02-28 22:37:48 grep file file1
+  638  2023-02-28 22:37:57 cp file file1
+  639  2023-02-28 22:38:18 cp file file2
+  640  2023-02-28 22:38:24 cp file1 file2
+  641  2023-02-28 22:38:28 ls
+  642  2023-02-28 22:38:30 cd aa
+  643  2023-02-28 22:38:31 pwd
+  644  2023-02-28 22:38:38 cp ../file .
+  645  2023-02-28 22:38:39 ls
+  646  2023-02-28 22:38:44 mv file1 file2
+  647  2023-02-28 22:38:46 ls
+  648  2023-02-28 22:38:58 mv ../file1 .
+  649  2023-02-28 22:39:34 cd csc60
+  650  2023-02-28 22:39:38 cd ..
+  651  2023-02-28 22:39:42 rm -r lab3
+  652  2023-02-28 22:39:44 cd ..
+  653  2023-02-28 22:39:56 script TimothyDoan_lab3.txt
+  654  2023-02-28 22:40:06 cd csc60
+  655  2023-02-28 22:40:23 mkdir lab3
+  656  2023-02-28 22:40:30 cd lab3
+  657  2023-02-28 22:40:31 pwd
+  658  2023-02-28 22:40:35 mkdir aaa
+  659  2023-02-28 22:40:38 cd aaa
+  660  2023-02-28 22:40:40 pwd
+  661  2023-02-28 22:40:47 cd ..
+  662  2023-02-28 22:40:49 pwd 
+  663  2023-02-28 22:40:53 ls > file1
+  664  2023-02-28 22:40:57 cat file1
+  665  2023-02-28 22:41:03 less file1
+  666  2023-02-28 22:41:08 file *
+  667  2023-02-28 22:41:11 wc file1
+  668  2023-02-28 22:41:20 wc *
+  669  2023-02-28 22:42:32 grep file file1
+  670  2023-03-05 21:58:31 cd csc60
+  671  2023-03-05 21:58:36 mkdir lab3
+  672  2023-03-05 21:58:42 cd lab3
+  673  2023-03-05 21:58:43 pwd
+  674  2023-03-05 21:58:47 mkdir aaa
+  675  2023-03-05 21:58:49 cd aaa
+  676  2023-03-05 21:58:52 pwd
+  677  2023-03-05 21:58:55 cd ..
+  678  2023-03-05 21:59:00 pwd
+  679  2023-03-05 21:59:05 ls > file1
+  680  2023-03-05 21:59:11 cat file1
+  681  2023-03-05 21:59:18 less file1
+  682  2023-03-05 21:59:24 file *
+  683  2023-03-05 21:59:29 wc file1
+  684  2023-03-05 21:59:32 wc *
+  685  2023-03-05 22:00:44 grep lab file1
+  686  2023-03-05 22:00:57 grep file file1
+  687  2023-03-05 22:01:12 cp file1 file2
+  688  2023-03-05 22:01:14 ls
+  689  2023-03-05 22:01:21 cd aaa
+  690  2023-03-05 22:01:23 pwd
+  691  2023-03-05 22:01:42 cp ../file1 .
+  692  2023-03-05 22:01:44 ls
+  693  2023-03-05 22:01:51 mv file1 file2
+  694  2023-03-05 22:01:53 ls
+  695  2023-03-05 22:02:02 mv ../file1 .
+  696  2023-03-05 22:02:03 cd ..
+  697  2023-03-05 22:02:05 ls
+  698  2023-03-05 22:02:07 cd aaa
+  699  2023-03-05 22:02:09 ls
+  700  2023-03-05 22:02:19 cmp file1 file2
+  701  2023-03-05 22:02:26 ls > aaalist
+  702  2023-03-05 22:02:33 cmp file1 aaalist
+  703  2023-03-05 22:02:43 diff file1 aaalist
+  704  2023-03-05 22:02:47 rm - file1
+  705  2023-03-05 22:02:51 ls
+  706  2023-03-05 22:02:54 ps u
+  707  2023-03-05 22:02:57 ps -l
+  708  2023-03-05 22:03:15 cd ..
+  709  2023-03-05 22:03:23 cd lab2
+  710  2023-03-05 22:03:30 head lab2.c
+  711  2023-03-05 22:03:39 head -20 lab2.c
+  712  2023-03-05 22:04:01 tail lab2.c
+  713  2023-03-05 22:04:16 tail -20 lab2.c
+  714  2023-03-05 22:04:26 ls- al | less
+  715  2023-03-05 22:04:39 ls -al | less
+  716  2023-03-05 22:04:46 history
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab2[timothydoan@ecs-pa-coding1 lab2]$ exit
+exit
+Script done, file is TimothyDoan_lab3.txt
+]0;timothydoan@ecs-pa-coding1:~[timothydoan@ecs-pa-coding1 ~]$ alpine
+[?1049h[1;63r[H[2J[1;1H[7m  ALPINE 2.24   MAIN MENU                                                                                           Folder: (CLOSED)                                                                                            No Messages  [1;237H[27m
+[K[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[9;1H[K[10;1H[K[11;1H[K[12;1H[K[13;1H[K[14;1H[K[15;1H[K[16;1H[K[17;1H[K[18;1H[K[19;1H[K[20;1H[K[21;1H[K[22;1H[K[23;1H[K[24;1H[K[25;1H[K[26;1H[K[27;1H[K[28;1H[K[29;1H[K[30;1H[K[31;1H[K[32;1H[K[33;1H[K[34;1H[K[35;1H[K[36;1H[K[37;1H[K[38;1H[K[39;1H[K[40;1H[K[41;1H[K[42;1H[K[43;1H[K[44;1H[K[45;1H[K[46;1H[K[47;1H[K[48;1H[K[49;1H[K[50;1H[K[51;1H[K[52;1H[K[53;1H[K[54;1H[K[55;1H[K[56;1H[K[57;1H[K[58;1H[K[59;1H[K[60;1H[K[2;1H[4;88H ?     HELP               -  Get help using Alpine           [6;88H C     COMPOSE MESSAGE    -  Compose and send a message      [8;88H I     MESSAGE INDEX      -  View messages in current folder [7m[10;88H L     FOLDER LIST        -  Select a folder to view         [27m[12;88H A     ADDRESS BOOK       -  Update address book             [14;88H S     SETUP              -  Configure Alpine Options        [16;88H Q     QUIT               -  Leave the Alpine program        [60;102HFor Copyright information press "?"[62;1H[K[63;1H[K[A[7m?[27m Help                                                                         [7mP[27m PrevCmd                                                                      [7mR[27m RelNotes                                                                     [62;237H
+[7mO[27m OTHER CMDS                           [7m>[27m [ListFldrs]                           [7mN[27m NextCmd                                                                      [7mK[27m KBLock                                                                      [62;1H[K[63;1H[K[A[A[K[7m[61;108H[Opening "INBOX"     ][27m[61;1H[K[7m[61;83H[Folder vulnerable - directory /var/spool/mail must have 1777 protection][27m[61;1H[61;82H[7m[>[61;155H<][27m[61;1H[61;82H[7m [[61;155H] [27m[61;1H[K[7mMove current "sent-mail" to "sent-mail-feb-2023"?                                                                                                                                                                                            [61;237H[61;51H[27m
+[K[63;1H[K[A[7m?[27m Help                                 [7mY[27m Yes                                                                                                                                                                                                 [62;237H
+                                       [7mN[27m [No]                                                                                                                                                                                               [7m[61;51H[27m[61;1H[K[7m[61;99H[Renaming "sent-mail" at start of month][27m[61;1H[61;98H[7m[>[61;138H<][27m[61;1H[61;98H[7m [[61;138H] [27m[61;1H[K[7mTo save disk space, delete old SENT mail folder "sent-mail-jan-2023" ?                                                                                                                                                                       [61;237H[61;72H[27m[7mYes[27m[7m[1;1H  ALPINE 2.24   MAIN MENU                                                                                              Folder: INBOX                                                                                              1 Message  [1;237H[27m[62;1H[7m?[27m Help                                                                         [7mP[27m PrevCmd                              [62;159H[7mR[27m RelNotes                             
+[7mO[27m OTHER CMDS                           [7m>[27m [ListFldrs]                           [7mN[27m NextCmd                              [63;159H[7mK[27m KBLock                               [61;1H[K[62;1H[7m^[27m[7mG[27m Get Help                            [7m^[27m[7mX[27m Send                                [7m^[27m[7mR[27m Read File                           [7m^[27m[7mY[27m Prev Pg                             [7m^[27m[7mK[27m Cut Text                            [7m^[27m[7mO[27m Postpone                            [K[63;1H[7m^[27m[7mC[27m Cancel                              [7m^[27m[7mJ[27m Justify                             [7m^[27m[7mW[27m Where is                            [7m^[27m[7mV[27m Next Pg                             [7m^[27m[7mU[27m UnCut Text                          [7m^[27m[7mT[27m To Spell                            [K[1;1H[7m  ALPINE 2.24   COMPOSE MESSAGE                                                                                           Folder: INBOX                                                                                           1 Message  [27m[2;1H[K[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[3;1HFrom    : timothydoan <timothydoan@ecs-pa-coding1.ecs.csus.edu>[K[4;1HTo      : [K[5;1HCc      : [K[6;1HAttchmnt: [K[7;1HSubject : [K[8;1H[7m----- Message Text -----[27m[K[9;1H[K[10;1H[K[11;1H[K[12;1H[K[13;1H[K[14;1H[K[15;1H[K[16;1H[K[17;1H[K[18;1H[K[19;1H[K[20;1H[K[21;1H[K[22;1H[K[23;1H[K[24;1H[K[25;1H[K[26;1H[K[27;1H[K[28;1H[K[29;1H[K[30;1H[K[31;1H[K[32;1H[K[33;1H[K[34;1H[K[35;1H[K[36;1H[K[37;1H[K[38;1H[K[39;1H[K[40;1H[K[41;1H[K[42;1H[K[43;1H[K[44;1H[K[45;1H[K[46;1H[K[47;1H[K[48;1H[K[49;1H[K[50;1H[K[51;1H[K[52;1H[K[53;1H[K[54;1H[K[55;1H[K[56;1H[K[57;1H[K[58;1H[K[59;1H[K[60;1H[K[61;1H[K[62;1H[K[63;1H[K[61;1H[K[9;1H[62;1H[7m^[27m[7mG[27m Get Help                            [7m^[27m[7mX[27m Send                                [7m^[27m[7mR[27m Read File                           [7m^[27m[7mY[27m Prev Pg                             [7m^[27m[7mK[27m Cut Text                            [7m^[27m[7mO[27m Postpone                            [K[63;1H[7m^[27m[7mC[27m Cancel                              [7m^[27m[7mJ[27m Justify                             [7m^[27m[7mW[27m Where is                            [7m^[27m[7mV[27m Next Pg                             [7m^[27m[7mU[27m UnCut Text                          [7m^[27m[7mT[27m To Spell                            [K[9;1H[8;1H----- Message Text -----[K[4;1H[7mTo      :[27m [62;83Hich Hdr                            [7m^[27m[7mY[27m PrvPg/Top                           [7m^[27m[7mK[27m Cut Line                            [7m^[27m[7mO[27m Postpone                            [K[63;41H[7mD[27m Del Char                            [7m^[27m[7mJ[27m Attach                              [7m^[27m[7mV[27m NxtPg/End                           [7m^[27m[7mU[27m UnDel Line                          [7m^[27m[7mT[27m To AddrBk                           [K[4;11H[4;11H[4ht[4l[4hi[4l[4hm[4l[4ho[4l[4ht[4l[4hh[4l[4hy[4l[4hd[4l[4ho[4l[4ha[4l[4hn[4l[4h@[4l[4hc[4l[4hs[4l[4hu[4l[4hs[4l[4h.[4l[4he[4l[4hd[4l[4hu[4l[4;1HTo      : [61;1H                                                                                                                                                                                                                                             [5;1H[7mCc      :[27m [5;1HCc      : [6;1H[7mAttchmnt:[27m [63;202HFiles                            [K[6;11H[4ht[4l[P[3;64H[K[4;31H[K[5;11H[K[6;11H[K[7;11H[K[6;11H[61;1H                                                                                                                                                                                                                                             [61;92H[7m[ Building file list of /home/student/timothydoan... ][27m[1;1H[K[2;1H[K[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[9;1H[K[10;1H[K[11;1H[K[12;1H[K[13;1H[K[14;1H[K[15;1H[K[16;1H[K[17;1H[K[18;1H[K[19;1H[K[20;1H[K[21;1H[K[22;1H[K[23;1H[K[24;1H[K[25;1H[K[26;1H[K[27;1H[K[28;1H[K[29;1H[K[30;1H[K[31;1H[K[32;1H[K[33;1H[K[34;1H[K[35;1H[K[36;1H[K[37;1H[K[38;1H[K[39;1H[K[40;1H[K[41;1H[K[42;1H[K[43;1H[K[44;1H[K[45;1H[K[46;1H[K[47;1H[K[48;1H[K[49;1H[K[50;1H[K[51;1H[K[52;1H[K[53;1H[K[54;1H[K[55;1H[K[56;1H[K[57;1H[K[58;1H[K[59;1H[K[60;1H[K[61;1H[K[62;1H[K[63;1H[K[1;1H[7m  ALPINE 2.24               BROWSER    Dir: /home/student/timothydoan                                                                                                                                                                        [27m[3;1H    [7m..                (parent dir)[27m[3;37H    csc35                    (dir)[3;73H    csc60                    (dir)[3;109H    mail                     (dir)[3;145H    a.out                   1.2 KB[3;181H    csc35.0                  534 B[4;1H    csc35.o                 6.6 KB[4;37H    dead.letter              359 B[4;73H    lab1.asm                 545 B[4;109H    lab1.o                  1.5 KB[4;145H    lab2.asm                1.7 KB[4;181H    lab2.o                  2.8 KB[5;1H    lab3.asm                1.6 KB[5;37H    lab3.o                  2.9 KB[5;73H    lab4.asm                 665 B[5;109H    lab4.o                  1.7 KB[5;145H    lab5.asm                1.7 KB[5;181H    lab5.o                  3.2 KB[6;1H    lab6.asm                1.4 KB[6;37H    lab6.o                  2.9 KB[6;73H    lab7.asm                 647 B[6;109H    lab7.o                  1.2 KB[6;145H    TimDoan_lab1.txt         381 B[6;181H    TimothyDoan_lab3.txt     41 KB[7;1H    TimothyDOan_lab3.txt       0 B[62;1H[7m?[27m Get Help                             [7mE[27m Exit Brwsr                           [7mL[27m ListMode                             [7m-[27m   Prev Pg                            [7mD[27m Delete                               [7mC[27m Copy                                 [K[63;1H[7mG[27m Goto                                 [7mS[27m [Select]                             [7mW[27m Where is                             [7mS[27m[7mp[27m[7mc[27m Next Pg                            [7mR[27m Rename                               [7mA[27m Add                                  [K[61;1H[3;1H    ..                (parent dir)[4;1H    [7mcsc35.o                 6.6 KB[27m[61;1H[4;1H    csc35.o                 6.6 KB[5;1H    [7mlab3.asm                1.6 KB[27m[61;1H[5;1H    lab3.asm                1.6 KB[6;1H    [7mlab6.asm                1.4 KB[27m[61;1H[6;1H    lab6.asm                1.4 KB[7;1H    [7mTimothyDOan_lab3.txt       0 B[27m[61;1H[1;1H[7m  ALPINE 2.24   COMPOSE MESSAGE                                                                                           Folder: INBOX                                                                                           1 Message  [27m[2;1H[K[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[3;1HFrom    : timothydoan <timothydoan@ecs-pa-coding1.ecs.csus.edu>[K[4;1HTo      : timothydoan@csus.edu[K[5;1HCc      : [K[6;1H[7mAttchmnt:[27m /home/student/timothydoan/TimothyDOan_lab3.txt (0 B) ""[K[7;1HSubject : [K[8;1H----- Message Text -----[K[9;1H[K[10;1H[K[11;1H[K[12;1H[K[13;1H[K[14;1H[K[15;1H[K[16;1H[K[17;1H[K[18;1H[K[19;1H[K[20;1H[K[21;1H[K[22;1H[K[23;1H[K[24;1H[K[25;1H[K[26;1H[K[27;1H[K[28;1H[K[29;1H[K[30;1H[K[31;1H[K[32;1H[K[33;1H[K[34;1H[K[35;1H[K[36;1H[K[37;1H[K[38;1H[K[39;1H[K[40;1H[K[41;1H[K[42;1H[K[43;1H[K[44;1H[K[45;1H[K[46;1H[K[47;1H[K[48;1H[K[49;1H[K[50;1H[K[51;1H[K[52;1H[K[53;1H[K[54;1H[K[55;1H[K[56;1H[K[57;1H[K[58;1H[K[59;1H[K[60;1H[K[61;1H[K[62;1H[K[63;1H[K[61;1H[K[9;1H[62;1H[7m^[27m[7mG[27m Get Help                            [7m^[27m[7mX[27m Send                                [7m^[27m[7mR[27m Rich Hdr                            [7m^[27m[7mY[27m PrvPg/Top                           [7m^[27m[7mK[27m Cut Line                            [7m^[27m[7mO[27m Postpone                            [K[63;1H[7m^[27m[7mC[27m Cancel                              [7m^[27m[7mD[27m Del Char                            [7m^[27m[7mJ[27m Attach                              [7m^[27m[7mV[27m NxtPg/End                           [7m^[27m[7mU[27m UnDel Line                          [7m^[27m[7mT[27m To Files                            [K[9;1H[61;1H                                                                                                                                                                                                                                             [6;11H[6;11H[61;1H                                                                                                                                                                                                                                             [61;1H[K[7m[61;79H[File /home/student/timothydoan/TimothyDOan_lab3.txt attached as type TEXT/plain][27m[61;1H[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[3;1H[7mFrom    :[27m timothydoan <timothydoan@ecs-pa-coding1.ecs.csus.edu>[K[4;1HTo      : timothydoan@csus.edu[K[5;1HCc      : [K[6;1HAttchmnt: 1. /home/student/timothydoan/TimothyDOan_lab3.txt (0 B) ""[K[7;1HSubject : [K[8;1H----- Message Text -----[K[1;1H[7m  ALPINE 2.24   COMPOSE MESSAGE                                                                                           Folder: INBOX                                                                                           1 Message  [27m[2;1H[K[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[3;1H[7mFrom    :[27m timothydoan <timothydoan@ecs-pa-coding1.ecs.csus.edu>[K[4;1HTo      : timothydoan@csus.edu[K[5;1HCc      : [K[6;1HAttchmnt: 1. /home/student/timothydoan/TimothyDOan_lab3.txt (0 B) ""[K[7;1HSubject : [K[8;1H----- Message Text -----[K[9;1H[K[10;1H[K[11;1H[K[12;1H[K[13;1H[K[14;1H[K[15;1H[K[16;1H[K[17;1H[K[18;1H[K[19;1H[K[20;1H[K[21;1H[K[22;1H[K[23;1H[K[24;1H[K[25;1H[K[26;1H[K[27;1H[K[28;1H[K[29;1H[K[30;1H[K[31;1H[K[32;1H[K[33;1H[K[34;1H[K[35;1H[K[36;1H[K[37;1H[K[38;1H[K[39;1H[K[40;1H[K[41;1H[K[42;1H[K[43;1H[K[44;1H[K[45;1H[K[46;1H[K[47;1H[K[48;1H[K[49;1H[K[50;1H[K[51;1H[K[52;1H[K[53;1H[K[54;1H[K[55;1H[K[56;1H[K[57;1H[K[58;1H[K[59;1H[K[60;1H[K[61;1H[K[62;1H[K[63;1H[K[61;1H[K[9;1H[62;1H[7m^[27m[7mG[27m Get Help                            [7m^[27m[7mX[27m Send                                [7m^[27m[7mR[27m Rich Hdr                            [7m^[27m[7mY[27m PrvPg/Top                           [7m^[27m[7mK[27m Cut Line                            [7m^[27m[7mO[27m Postpone                            [K[63;1H[7m^[27m[7mC[27m Cancel                              [7m^[27m[7mD[27m Del Char                            [7m^[27m[7mJ[27m Attach                              [7m^[27m[7mV[27m NxtPg/End                           [7m^[27m[7mU[27m UnDel Line                          [7m^[27m[7mT[27m To AddrBk                           [K[9;1H[61;1H                                                                                                                                                                                                                                             [61;1H[K[7mSend message?                                                                                                                                                                                                                                [61;237H[61;15H[27m
+[K[63;1H[K[A [7m?[27m Help                                [7mY[27m [Yes]                                 [7m^V[27m NoFlow                              [7mE[27m Encrypt                                                                                                              [62;237H
+[7m^C[27m Cancel                              [7mN[27m No                                     [7mP[27m Priority                            [7mG[27m Sign                                                                                                                [7m[61;15HYes[27m[62;1H[K[63;1H[K[61;1H[K[7m[61;110H[Sending mail     ][27m[61;1H[K[7m[61;107H[Writing Fcc            ][27m[61;1H[7m[1;1H  ALPINE 2.24   MAIN MENU                                                                                              Folder: INBOX                                                                                              1 Message  [1;237H[27m
+[K[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[9;1H[K[10;1H[K[11;1H[K[12;1H[K[13;1H[K[14;1H[K[15;1H[K[16;1H[K[17;1H[K[18;1H[K[19;1H[K[20;1H[K[21;1H[K[22;1H[K[23;1H[K[24;1H[K[25;1H[K[26;1H[K[27;1H[K[28;1H[K[29;1H[K[30;1H[K[31;1H[K[32;1H[K[33;1H[K[34;1H[K[35;1H[K[36;1H[K[37;1H[K[38;1H[K[39;1H[K[40;1H[K[41;1H[K[42;1H[K[43;1H[K[44;1H[K[45;1H[K[46;1H[K[47;1H[K[48;1H[K[49;1H[K[50;1H[K[51;1H[K[52;1H[K[53;1H[K[54;1H[K[55;1H[K[56;1H[K[57;1H[K[58;1H[K[59;1H[K[60;1H[K[2;1H[4;88H ?     HELP               -  Get help using Alpine           [6;88H C     COMPOSE MESSAGE    -  Compose and send a message      [8;88H I     MESSAGE INDEX      -  View messages in current folder [7m[10;88H L     FOLDER LIST        -  Select a folder to view         [27m[12;88H A     ADDRESS BOOK       -  Update address book             [14;88H S     SETUP              -  Configure Alpine Options        [16;88H Q     QUIT               -  Leave the Alpine program        [60;102HFor Copyright information press "?"[62;1H[K[63;1H[K[A[7m?[27m Help                                                                         [7mP[27m PrevCmd                                                                      [7mR[27m RelNotes                                                                     [62;237H
+[7mO[27m OTHER CMDS                           [7m>[27m [ListFldrs]                           [7mN[27m NextCmd                                                                      [7mK[27m KBLock                                                                      [61;1H[K[7m[61;110H[Writing Fcc DONE][27m[61;1H[K[7m[61;101H[Invalid key pressed. Use ? for help][27m[61;1H[K[7mReally quit Alpine?                                                                                                                                                                                                                          [61;237H[61;21H[27m
+[7mY[27m [Yes]                                                                                                               [62;159H                                       
+[7mN[27m No                                                                                                                  [63;159H                                       [7m[61;21HYes[27m[61;1H[K[7m[61;109H[Closing "INBOX"...][27m[61;1H[62;1H[K[63;1H[K[A[?1049lAlpine finished -- Closed folder "INBOX". Kept single message.
+]0;timothydoan@ecs-pa-coding1:~[timothydoan@ecs-pa-coding1 ~]$ alpine
+[?1049h[1;63r[H[2J[1;1H[7m  ALPINE 2.24   MAIN MENU                                                                                           Folder: (CLOSED)                                                                                            No Messages  [1;237H[27m
+[K[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[9;1H[K[10;1H[K[11;1H[K[12;1H[K[13;1H[K[14;1H[K[15;1H[K[16;1H[K[17;1H[K[18;1H[K[19;1H[K[20;1H[K[21;1H[K[22;1H[K[23;1H[K[24;1H[K[25;1H[K[26;1H[K[27;1H[K[28;1H[K[29;1H[K[30;1H[K[31;1H[K[32;1H[K[33;1H[K[34;1H[K[35;1H[K[36;1H[K[37;1H[K[38;1H[K[39;1H[K[40;1H[K[41;1H[K[42;1H[K[43;1H[K[44;1H[K[45;1H[K[46;1H[K[47;1H[K[48;1H[K[49;1H[K[50;1H[K[51;1H[K[52;1H[K[53;1H[K[54;1H[K[55;1H[K[56;1H[K[57;1H[K[58;1H[K[59;1H[K[60;1H[K[2;1H[4;88H ?     HELP               -  Get help using Alpine           [6;88H C     COMPOSE MESSAGE    -  Compose and send a message      [8;88H I     MESSAGE INDEX      -  View messages in current folder [7m[10;88H L     FOLDER LIST        -  Select a folder to view         [27m[12;88H A     ADDRESS BOOK       -  Update address book             [14;88H S     SETUP              -  Configure Alpine Options        [16;88H Q     QUIT               -  Leave the Alpine program        [60;102HFor Copyright information press "?"[62;1H[K[63;1H[K[A[7m?[27m Help                                                                         [7mP[27m PrevCmd                                                                      [7mR[27m RelNotes                                                                     [62;237H
+[7mO[27m OTHER CMDS                           [7m>[27m [ListFldrs]                           [7mN[27m NextCmd                                                                      [7mK[27m KBLock                                                                      [62;1H[K[63;1H[K[A[A[K[7m[61;108H[Opening "INBOX"     ][27m[61;1H[7m[1;1H  ALPINE 2.24   MAIN MENU                                                                                              Folder: INBOX                                                                                              1 Message  [1;237H[27m[62;1H[K[63;1H[K[A[7m?[27m Help                                                                         [7mP[27m PrevCmd                                                                      [7mR[27m RelNotes                                                                     [62;237H
+[7mO[27m OTHER CMDS                           [7m>[27m [ListFldrs]                           [7mN[27m NextCmd                                                                      [7mK[27m KBLock                                                                      [61;1H[K[7m[61;83H[Folder vulnerable - directory /var/spool/mail must have 1777 protection][27m[61;1H[K[7m[61;108H[Opening "INBOX" DONE][27m[61;1H[62;1H[7m^[27m[7mG[27m Get Help                            [7m^[27m[7mX[27m Send                                [7m^[27m[7mR[27m Read File                           [7m^[27m[7mY[27m Prev Pg                             [7m^[27m[7mK[27m Cut Text                            [7m^[27m[7mO[27m Postpone                            [K[63;1H[7m^[27m[7mC[27m Cancel                              [7m^[27m[7mJ[27m Justify                             [7m^[27m[7mW[27m Where is                            [7m^[27m[7mV[27m Next Pg                             [7m^[27m[7mU[27m UnCut Text                          [7m^[27m[7mT[27m To Spell                            [K[1;1H[7m  ALPINE 2.24   COMPOSE MESSAGE                                                                                           Folder: INBOX                                                                                           1 Message  [27m[2;1H[K[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[3;1HFrom    : timothydoan <timothydoan@ecs-pa-coding1.ecs.csus.edu>[K[4;1HTo      : [K[5;1HCc      : [K[6;1HAttchmnt: [K[7;1HSubject : [K[8;1H[7m----- Message Text -----[27m[K[9;1H[K[10;1H[K[11;1H[K[12;1H[K[13;1H[K[14;1H[K[15;1H[K[16;1H[K[17;1H[K[18;1H[K[19;1H[K[20;1H[K[21;1H[K[22;1H[K[23;1H[K[24;1H[K[25;1H[K[26;1H[K[27;1H[K[28;1H[K[29;1H[K[30;1H[K[31;1H[K[32;1H[K[33;1H[K[34;1H[K[35;1H[K[36;1H[K[37;1H[K[38;1H[K[39;1H[K[40;1H[K[41;1H[K[42;1H[K[43;1H[K[44;1H[K[45;1H[K[46;1H[K[47;1H[K[48;1H[K[49;1H[K[50;1H[K[51;1H[K[52;1H[K[53;1H[K[54;1H[K[55;1H[K[56;1H[K[57;1H[K[58;1H[K[59;1H[K[60;1H[K[61;1H[K[62;1H[K[63;1H[K[61;1H[K[9;1H[62;1H[7m^[27m[7mG[27m Get Help                            [7m^[27m[7mX[27m Send                                [7m^[27m[7mR[27m Read File                           [7m^[27m[7mY[27m Prev Pg                             [7m^[27m[7mK[27m Cut Text                            [7m^[27m[7mO[27m Postpone                            [K[63;1H[7m^[27m[7mC[27m Cancel                              [7m^[27m[7mJ[27m Justify                             [7m^[27m[7mW[27m Where is                            [7m^[27m[7mV[27m Next Pg                             [7m^[27m[7mU[27m UnCut Text                          [7m^[27m[7mT[27m To Spell                            [K[9;1H[8;1H----- Message Text -----[K[4;1H[7mTo      :[27m [62;83Hich Hdr                            [7m^[27m[7mY[27m PrvPg/Top                           [7m^[27m[7mK[27m Cut Line                            [7m^[27m[7mO[27m Postpone                            [K[63;41H[7mD[27m Del Char                            [7m^[27m[7mJ[27m Attach                              [7m^[27m[7mV[27m NxtPg/End                           [7m^[27m[7mU[27m UnDel Line                          [7m^[27m[7mT[27m To AddrBk                           [K[4;11H[4;11H[4ht[4l[4hi[4l[4hm[4l[4ho[4l[4ht[4l[4hh[4l[4hy[4l[4hd[4l[4ho[4l[4ha[4l[4hn[4l[4h@[4l[4hc[4l[4hs[4l[4hu[4l[4hs[4l[4h.[4l[4he[4l[4hd[4l[4hu[4l[4;1HTo      : [61;1H                                                                                                                                                                                                                                             [5;1H[7mCc      :[27m [5;1HCc      : [6;1H[7mAttchmnt:[27m [63;202HFiles                            [K[6;11H[61;1H                                                                                                                                                                                                                                             [61;92H[7m[ Building file list of /home/student/timothydoan... ][27m[1;1H[K[2;1H[K[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[9;1H[K[10;1H[K[11;1H[K[12;1H[K[13;1H[K[14;1H[K[15;1H[K[16;1H[K[17;1H[K[18;1H[K[19;1H[K[20;1H[K[21;1H[K[22;1H[K[23;1H[K[24;1H[K[25;1H[K[26;1H[K[27;1H[K[28;1H[K[29;1H[K[30;1H[K[31;1H[K[32;1H[K[33;1H[K[34;1H[K[35;1H[K[36;1H[K[37;1H[K[38;1H[K[39;1H[K[40;1H[K[41;1H[K[42;1H[K[43;1H[K[44;1H[K[45;1H[K[46;1H[K[47;1H[K[48;1H[K[49;1H[K[50;1H[K[51;1H[K[52;1H[K[53;1H[K[54;1H[K[55;1H[K[56;1H[K[57;1H[K[58;1H[K[59;1H[K[60;1H[K[61;1H[K[62;1H[K[63;1H[K[1;1H[7m  ALPINE 2.24               BROWSER    Dir: /home/student/timothydoan                                                                                                                                                                        [27m[3;1H    [7m..                (parent dir)[27m[3;37H    csc35                    (dir)[3;73H    csc60                    (dir)[3;109H    mail                     (dir)[3;145H    a.out                   1.2 KB[3;181H    csc35.0                  534 B[4;1H    csc35.o                 6.6 KB[4;37H    dead.letter              359 B[4;73H    lab1.asm                 545 B[4;109H    lab1.o                  1.5 KB[4;145H    lab2.asm                1.7 KB[4;181H    lab2.o                  2.8 KB[5;1H    lab3.asm                1.6 KB[5;37H    lab3.o                  2.9 KB[5;73H    lab4.asm                 665 B[5;109H    lab4.o                  1.7 KB[5;145H    lab5.asm                1.7 KB[5;181H    lab5.o                  3.2 KB[6;1H    lab6.asm                1.4 KB[6;37H    lab6.o                  2.9 KB[6;73H    lab7.asm                 647 B[6;109H    lab7.o                  1.2 KB[6;145H    TimDoan_lab1.txt         381 B[6;181H    TimothyDoan_lab3.txt     66 KB[7;1H    TimothyDOan_lab3.txt       0 B[62;1H[7m?[27m Get Help                             [7mE[27m Exit Brwsr                           [7mL[27m ListMode                             [7m-[27m   Prev Pg                            [7mD[27m Delete                               [7mC[27m Copy                                 [K[63;1H[7mG[27m Goto                                 [7mS[27m [Select]                             [7mW[27m Where is                             [7mS[27m[7mp[27m[7mc[27m Next Pg                            [7mR[27m Rename                               [7mA[27m Add                                  [K[61;1H[3;1H    ..                (parent dir)[4;1H    [7mcsc35.o                 6.6 KB[27m[61;1H[4;1H    csc35.o                 6.6 KB[5;1H    [7mlab3.asm                1.6 KB[27m[61;1H[5;1H    lab3.asm                1.6 KB[6;1H    [7mlab6.asm                1.4 KB[27m[61;1H[6;1H    lab6.asm                1.4 KB[6;37H    [7mlab6.o                  2.9 KB[27m[61;1H[6;37H    lab6.o                  2.9 KB[6;73H    [7mlab7.asm                 647 B[27m[61;1H[6;73H    lab7.asm                 647 B[6;109H    [7mlab7.o                  1.2 KB[27m[61;1H[6;109H    lab7.o                  1.2 KB[6;145H    [7mTimDoan_lab1.txt         381 B[27m[61;1H[6;145H    TimDoan_lab1.txt         381 B[6;181H    [7mTimothyDoan_lab3.txt     66 KB[27m[61;1H[6;181H    TimothyDoan_lab3.txt     66 KB[7;1H    [7mTimothyDOan_lab3.txt       0 B[27m[61;1H[7;1H    TimothyDOan_lab3.txt       0 B[6;181H    [7mTimothyDoan_lab3.txt     66 KB[27m[61;1H[1;1H[7m  ALPINE 2.24   COMPOSE MESSAGE                                                                                           Folder: INBOX                                                                                           1 Message  [27m[2;1H[K[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[3;1HFrom    : timothydoan <timothydoan@ecs-pa-coding1.ecs.csus.edu>[K[4;1HTo      : timothydoan@csus.edu[K[5;1HCc      : [K[6;1H[7mAttchmnt:[27m /home/student/timothydoan/TimothyDoan_lab3.txt (66 KB) ""[K[7;1HSubject : [K[8;1H----- Message Text -----[K[9;1H[K[10;1H[K[11;1H[K[12;1H[K[13;1H[K[14;1H[K[15;1H[K[16;1H[K[17;1H[K[18;1H[K[19;1H[K[20;1H[K[21;1H[K[22;1H[K[23;1H[K[24;1H[K[25;1H[K[26;1H[K[27;1H[K[28;1H[K[29;1H[K[30;1H[K[31;1H[K[32;1H[K[33;1H[K[34;1H[K[35;1H[K[36;1H[K[37;1H[K[38;1H[K[39;1H[K[40;1H[K[41;1H[K[42;1H[K[43;1H[K[44;1H[K[45;1H[K[46;1H[K[47;1H[K[48;1H[K[49;1H[K[50;1H[K[51;1H[K[52;1H[K[53;1H[K[54;1H[K[55;1H[K[56;1H[K[57;1H[K[58;1H[K[59;1H[K[60;1H[K[61;1H[K[62;1H[K[63;1H[K[61;1H[K[9;1H[62;1H[7m^[27m[7mG[27m Get Help                            [7m^[27m[7mX[27m Send                                [7m^[27m[7mR[27m Rich Hdr                            [7m^[27m[7mY[27m PrvPg/Top                           [7m^[27m[7mK[27m Cut Line                            [7m^[27m[7mO[27m Postpone                            [K[63;1H[7m^[27m[7mC[27m Cancel                              [7m^[27m[7mD[27m Del Char                            [7m^[27m[7mJ[27m Attach                              [7m^[27m[7mV[27m NxtPg/End                           [7m^[27m[7mU[27m UnDel Line                          [7m^[27m[7mT[27m To Files                            [K[9;1H[61;1H                                                                                                                                                                                                                                             [6;11H[61;1H                                                                                                                                                                                                                                             [61;1H[K[7m[61;79H[File /home/student/timothydoan/TimothyDoan_lab3.txt attached as type TEXT/plain][27m[61;1H[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[3;1H[7mFrom    :[27m timothydoan <timothydoan@ecs-pa-coding1.ecs.csus.edu>[K[4;1HTo      : timothydoan@csus.edu[K[5;1HCc      : [K[6;1HAttchmnt: 1. /home/student/timothydoan/TimothyDoan_lab3.txt (66 KB) ""[K[7;1HSubject : [K[8;1H----- Message Text -----[K[1;1H[7m  ALPINE 2.24   COMPOSE MESSAGE                                                                                           Folder: INBOX                                                                                           1 Message  [27m[2;1H[K[3;1H[K[4;1H[K[5;1H[K[6;1H[K[7;1H[K[8;1H[K[3;1H[7mFrom    :[27m timothydoan <timothydoan@ecs-pa-coding1.ecs.csus.edu>[K[4;1HTo      : timothydoan@csus.edu[K[5;1HCc      : [K[6;1HAttchmnt: 1. /home/student/timothydoan/TimothyDoan_lab3.txt (66 KB) ""[K[7;1HSubject : [K[8;1H----- Message Text -----[K[9;1H[K[10;1H[K[11;1H[K[12;1H[K[13;1H[K[14;1H[K[15;1H[K[16;1H[K[17;1H[K[18;1H[K[19;1H[K[20;1H[K[21;1H[K[22;1H[K[23;1H[K[24;1H[K[25;1H[K[26;1H[K[27;1H[K[28;1H[K[29;1H[K[30;1H[K[31;1H[K[32;1H[K[33;1H[K[34;1H[K[35;1H[K[36;1H[K[37;1H[K[38;1H[K[39;1H[K[40;1H[K[41;1H[K[42;1H[K[43;1H[K[44;1

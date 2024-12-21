@@ -1,0 +1,163 @@
+Script started on Thu 18 May 2023 10:53:15 PM PDT
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab10[?1034h[timothydoan@ecs-pa-coding1 lab10]$ touch lab0_[K[K9_10.h
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab10[timothydoan@ecs-pa-coding1 lab10]$ make
+gcc -c lab10.c
+gcc -c ParseCmd.c
+gcc -c ProcessExtCmd.c
+gcc -c Redirect.c
+gcc -c RunExtCmd.c
+gcc lab10.o ParseCmd.o ProcessExtCmd.o Redirect.o RunExtCmd.o -o lab10
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab10[timothydoan@ecs-pa-coding1 lab10]$ ./lan[Kb10
+
+CSC60msh> ls > lsout
+Argc = 3 
+Argv 0 = ls 
+Argv 1 = > 
+Argv 2 = lsout 
+Child returned status: 0
+
+
+CSC60msh> cat lsout
+Argc = 2 
+Argv 0 = cat 
+Argv 1 = lsout 
+\
+f2
+lab10
+lab10.c
+lab10.o
+lab10.txt
+lab9_10.h
+lsout
+makefile
+ParseCmd.c
+ParseCmd.o
+ProcessExtCmd.c
+ProcessExtCmd.o
+Redirect.c
+Redirect.o
+RunExtCmd.c
+RunExtCmd.o
+wcout
+Child returned status: 0
+
+
+CSC60msh> ls > lsout > file1
+Argc = 5 
+Argv 0 = ls 
+Argv 1 = > 
+Argv 2 = lsout 
+Argv 3 = > 
+Argv 4 = file1 
+Cannot ouput to more than one file: Success
+Child returned status: 256
+
+
+CSC60msh> cat foo.txt
+Argc = 2 
+Argv 0 = cat 
+Argv 1 = foo.txt 
+cat: foo.txt: No such file or directory
+Child returned status: 256
+
+
+CSC60msh> > lsout
+Argc = 2 
+Argv 0 = > 
+Argv 1 = lsout 
+No command entered: Success
+Child returned status: 256
+
+
+CSC60msh> < lsout
+Argc = 2 
+Argv 0 = < 
+Argv 1 = lsout 
+No command entered: Success
+Child returned status: 256
+
+
+CSC60msh> wc < lsout
+Argc = 3 
+Argv 0 = wc 
+Argv 1 = < 
+Argv 2 = lsout 
+ 18  18 168
+Child returned status: 0
+
+
+CSC60msh> wc < lsout > scout     wcout
+Argc = 5 
+Argv 0 = wc 
+Argv 1 = < 
+Argv 2 = lsout 
+Argv 3 = > 
+Argv 4 = wcout 
+Child returned status: 0
+
+
+CSC60msh> cat wcout
+Argc = 2 
+Argv 0 = cat 
+Argv 1 = wcout 
+ 18  18 168
+Child returned status: 0
+
+
+CSC60msh> wc < lsout >   < wcout
+Argc = 5 
+Argv 0 = wc 
+Argv 1 = < 
+Argv 2 = lsout 
+Argv 3 = < 
+Argv 4 = wcout 
+Cannot input more than one file: Success
+Child returned status: 256
+
+
+CSC60msh> cd ../lab1 2
+Argc = 2 
+Argv 0 = cd 
+Argv 1 = ../lab2 
+
+CSC60msh> pwd
+Argc = 1 
+Argv 0 = pwd 
+/home/student/timothydoan/csc60/lab2
+
+CSC60msh> gcc lab2.c
+Argc = 2 
+Argv 0 = gcc 
+Argv 1 = lab2.c 
+Child returned status: 0
+
+
+CSC60msh> a,.  .out
+Argc = 1 
+Argv 0 = a.out 
+Error on the exec call
+Child returned status: 256
+
+
+CSC60msh> ./a.out
+Argc = 1 
+Argv 0 = ./a.out 
+
+Lab 2.
+
+Hello World.
+Hi, Timothy Doan. 
+
+No matter how difficult the challenge is, always stay positive and believe in yourself.
+- Kobe Bryant
+
+Child returned status: 0
+
+
+CSC60msh> exit
+Argc = 1 
+Argv 0 = exit 
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab10[timothydoan@ecs-pa-coding1 lab10]$ exit
+exit
+
+Script done on Thu 18 May 2023 10:55:11 PM PDT

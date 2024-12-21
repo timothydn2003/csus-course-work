@@ -1,0 +1,54 @@
+Total Score: 61/72
+Testcases Score: 48/57
+Quality Score: 13/15
+
+Failed testcases:
+    Test 2:
+        Failed on:n is 2 -r -t  (output is sorted with sort -n)
+        Output file contains:
+        a b
+
+        c
+
+        Expected Output is:
+        + echo a b
+
+        + echo c
+
+        a b
+
+        c
+
+    Test 3:
+        Failed on:n is 2 -r -t bu moving around the parameters (output is sorted with sort -n)
+        Output file contains:
+        a b
+
+        c
+
+        Expected Output is:
+
+        + echo a b
+
+        + echo c
+
+        a b
+
+        c
+
+    Test 9:
+        Failed on:Test with -t and -n 1 (trace output, each argument should be echoed separately)  (output is sorted with sort -n)
+        Output file contains:
+        a
+
+        b
+
+        Expected Output is:
+
+        + echo a
+
+        + echo b
+
+        a
+
+        b

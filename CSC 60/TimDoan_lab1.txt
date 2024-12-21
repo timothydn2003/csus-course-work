@@ -1,0 +1,14 @@
+Script started on Wed 08 Feb 2023 09:12:06 PM PST
+]0;timothydoan@ecs-pa-coding1:~[?1034h[timothydoan@ecs-pa-coding1 ~]$ cat .vimrc
+"Timothy Doan
+:set tabstop=4
+:set shiftwidth=4
+:set smartindent
+:set expandtab
+:set number
+:set background=dark
+
+]0;timothydoan@ecs-pa-coding1:~[timothydoan@ecs-pa-coding1 ~]$ exit
+exit
+
+Script done on Wed 08 Feb 2023 09:12:22 PM PST

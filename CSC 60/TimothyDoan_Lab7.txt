@@ -1,0 +1,26 @@
+Script started on Fri 07 Apr 2023 12:29:38 AM PDT
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab7[?1034h[timothydoan@ecs-pa-coding1 lab7]$ touch lab7.h
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab7[timothydoan@ecs-pa-coding1 lab7]$ make
+gcc -c get_data.c
+gcc -c get_range_count.c 
+gcc -c print_all.c 
+gcc lab7.c get_data.o get_range_count.o print_all.o -o lab7 -lm
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab7[timothydoan@ecs-pa-coding1 lab7]$ ./lab7
+
+Timothy Doan  Lab 7. 
+
+File lab7a.dat:  
+There are 12 values in the range of 90 through 99
+out of a total of 29 values.
+
+
+Timothy Doan  Lab 7. 
+
+File lab7b.dat:  
+There are 10 values in the range of 90 through 99
+out of a total of 29 values.
+
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab7[timothydoan@ecs-pa-coding1 lab7]$ exit
+exit
+
+Script done on Fri 07 Apr 2023 12:29:53 AM PDT

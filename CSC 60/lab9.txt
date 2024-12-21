@@ -1,0 +1,59 @@
+Script started on Sun 07 May 2023 09:47:54 PM PDT
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab9[?1034h[timothydoan@ecs-pa-coding1 lab9]$ touch lab9_10.h
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab9[timothydoan@ecs-pa-coding1 lab9]$ make 
+gcc -c lab9.c
+gcc -c ParseCmd.c 
+gcc lab9.o ParseCmd.o -o lab9
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab9[timothydoan@ecs-pa-coding1 lab9]$ ./lab9
+
+FillThisIn> 
+Argc = 0 
+
+FillThisIn>  
+Argc = 0 
+
+FillThisIn> pwd
+Argc = 1 
+Argv 0 = pwd 
+/home/student/timothydoan/csc60/lab9
+
+FillThisIn> cd ..
+Argc = 2 
+Argv 0 = cd 
+Argv 1 = .. 
+
+FillThisIn> pwd
+Argc = 1 
+Argv 0 = pwd 
+/home/student/timothydoan/csc60
+
+FillThisIn> cd lab9
+Argc = 2 
+Argv 0 = cd 
+Argv 1 = lab9 
+
+FillThisIn> pwd\
+Argc = 1 
+Argv 0 = pwd\ 
+
+FillThisIn> cd  pwd
+Argc = 1 
+Argv 0 = pwd 
+/home/student/timothydoan/csc60/lab9
+
+FillThisIn> cd
+Argc = 1 
+Argv 0 = cd 
+
+FillThisIn> pwd
+Argc = 1 
+Argv 0 = pwd 
+/home/student/timothydoan
+
+FillThisIn> exit
+Argc = 1 
+Argv 0 = exit 
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab9[timothydoan@ecs-pa-coding1 lab9]$ exit
+exit
+
+Script done on Sun 07 May 2023 09:49:05 PM PDT

@@ -1,0 +1,25 @@
+Script started on Sun 12 Mar 2023 11:05:26 PM PDT
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab5[?1034h[timothydoan@ecs-pa-coding1 lab5]$ exitmysql -h ecs-pd-proj-db.ecs.csus.edu -u CSC134064 -p[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kmysql -h ecs-pd-proj-db.ecs.csus.edu -u CSC134064 -pcsc[C[C[C[C[C[C[C[C[C2[C[C[C[C[C[C[C3[C[C[C[C[C[C[CCSC[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kmysql -h ecs-pd-proj-db.ecs.csus.edu -u CSC134064 -p[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K[Kgcc lab5.c
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab5[timothydoan@ecs-pa-coding1 lab5]$ a.out[K[K[K[K[K./a.out
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab5[timothydoan@ecs-pa-coding1 lab5]$ cat lab5.txt
+
+Timothy Doan.  Lab 5. 
+
+Data on Parabolas 
+
+ Length      Depth        Area   
+--------   ---------   --------- 
+  12.60     24.80       208.320
+
+   5.60      7.80        29.120
+
+   7.85     12.61        65.992
+
+   8.90      4.70        27.887
+
+
+
+]0;timothydoan@ecs-pa-coding1:~/csc60/lab5[timothydoan@ecs-pa-coding1 lab5]$ exit
+exit
+
+Script done on Sun 12 Mar 2023 11:05:56 PM PDT
